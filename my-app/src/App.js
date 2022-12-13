@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 function App() {
   return (
     <div>      
@@ -14,19 +15,19 @@ function App() {
 <div className="login-wrapper" id="login-content">
     <div className="login-content">
         <a href="#" className="close">x</a>
-        <h3>Login</h3>
+        <h3>Iniciar Sesion</h3>
         <form method="post" action="#">
         	<div className="row">
         		 <label for="username">
-                    Username:
-                    <input type="text" name="username" id="username" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                    Usuario:
+                    <input type="text" name="username" id="username" placeholder="Nombre" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
                 </label>
         	</div>
            
             <div className="row">
             	<label for="password">
-                    Password:
-                    <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                    Contraseña:
+                    <input type="password" name="password" id="password" placeholder="Contraseña" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
                 </label>
             </div>
             <div className="row">
@@ -34,15 +35,15 @@ function App() {
 					<div>
 						<input type="checkbox" name="remember" value="Remember me"/><span>Remember me</span>
 					</div>
-            		<a href="#">Forget password ?</a>
+            		<a href="#">Olvidaste tu contraseña?</a>
             	</div>
             </div>
            <div className="row">
-           	 <button type="submit">Login</button>
+           	 <button type="submit">Iniciar sesion</button>
            </div>
         </form>
         <div className="row">
-        	<p>Or via social</p>
+        	<p> o por medio de tus redes sociales</p>
             <div className="social-btn-2">
             	<a className="fb" href="#"><i className="ion-social-facebook"></i>Facebook</a>
             	<a className="tw" href="#"><i className="ion-social-twitter"></i>twitter</a>
@@ -54,35 +55,35 @@ function App() {
 <div className="login-wrapper"  id="signup-content">
     <div className="login-content">
         <a href="#" className="close">x</a>
-        <h3>sign up</h3>
+        <h3>Crear cuenta</h3>
         <form method="post" action="#">
             <div className="row">
                  <label for="username-2">
-                    Username:
+                    Usuario:
                     <input type="text" name="username" id="username-2" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
                 </label>
             </div>
            
             <div className="row">
                 <label for="email-2">
-                    your email:
+                    Correo electronico:
                     <input type="password" name="email" id="email-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
                 </label>
             </div>
              <div className="row">
                 <label for="password-2">
-                    Password:
+                    Contraseña:
                     <input type="password" name="password" id="password-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
                 </label>
             </div>
              <div className="row">
                 <label for="repassword-2">
-                    re-type Password:
+                    Verificar Contraseña:
                     <input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
                 </label>
             </div>
            <div className="row">
-             <button type="submit">sign up</button>
+             <button type="submit">Crear Cuenta</button>
            </div>
         </form>
     </div>
@@ -111,78 +112,62 @@ function App() {
 						</li>
 						<li className="dropdown first">
 							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
-							Home <i className="fa fa-angle-down" aria-hidden="true"></i>
+							Inicio <i className="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul className="dropdown-menu level1">
-								<li><a href="index-2.html">Home 01</a></li>
-								<li><a href="homev2.html">Home 02</a></li>
-								<li><a href="homev3.html">Home 03</a></li>
+								<li><a href="index-2.html">Peliculas</a></li>
+								<li><a href="homev2.html">Series</a></li>
 							</ul>
 						</li>
 						<li className="dropdown first">
 							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-							movies<i className="fa fa-angle-down" aria-hidden="true"></i>
+							Categorias<i className="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul className="dropdown-menu level1">
-								<li className="dropdown">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" >Movie grid<i className="ion-ios-arrow-forward"></i></a>
-									<ul className="dropdown-menu level2">
-										<li><a href="moviegrid.html">Movie grid</a></li>
-										<li><a href="moviegridfw.html">movie grid full width</a></li>
-									</ul>
-								</li>			
-								<li><a href="movielist.html">Movie list</a></li>
-								<li><a href="moviesingle.html">Movie single</a></li>
-								<li className="it-last"><a href="seriessingle.html">Series single</a></li>
+								<li><a href="moviesingle.html">Drama</a></li>
+								<li><a href="moviesingle.html">Comedia</a></li>
+								<li><a href="moviesingle.html">Fantasia</a></li>
+								<li><a href="moviesingle.html">Accion</a></li>
+								<li><a href="moviesingle.html">Anime</a></li>
+								<li><a href="moviesingle.html">Documental</a></li>
+								<li><a href="moviesingle.html">Ciencia Ficcion</a></li>
+								<li><a href="moviesingle.html">Suspenso</a></li>
+								<li><a href="moviesingle.html">Terror</a></li>
+								<li className="it-last"><a href="seriessingle.html">Familiar</a></li>
 							</ul>
 						</li>
 						<li className="dropdown first">
 							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-							celebrities <i className="fa fa-angle-down" aria-hidden="true"></i>
+							Ultimas añadidas <i className="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul className="dropdown-menu level1">
-								<li><a href="celebritygrid01.html">celebrity grid 01</a></li>
-								<li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
-								<li><a href="celebritylist.html">celebrity list</a></li>
-								<li className="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+								<li><a href="celebritygrid01.html">Peliculas</a></li>
+								<li><a href="celebritygrid02.html">Serie </a></li>
 							</ul>
 						</li>
 						<li className="dropdown first">
 							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-							news <i className="fa fa-angle-down" aria-hidden="true"></i>
+							Popular <i className="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul className="dropdown-menu level1">
-								<li><a href="bloglist.html">blog List</a></li>
-								<li><a href="bloggrid.html">blog Grid</a></li>
-								<li className="it-last"><a href="blogdetail.html">blog Detail</a></li>
+								<li><a href="bloglist.html">Peliculas</a></li>
+								<li className="it-last"><a href="blogdetail.html">Series</a></li>
 							</ul>
 						</li>
 						<li className="dropdown first">
 							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-							community <i className="fa fa-angle-down" aria-hidden="true"></i>
+							Añadir <i className="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul className="dropdown-menu level1">
-								<li><a href="userfavoritegrid.html">user favorite grid</a></li>
-								<li><a href="userfavoritelist.html">user favorite list</a></li>
-								<li><a href="userprofile.html">user profile</a></li>
-								<li className="it-last"><a href="userrate.html">user rate</a></li>
+								<li><a href="userfavoritegrid.html">Pelicula</a></li>
+								<li className="it-last"><a href="userrate.html">Serie</a></li>
 							</ul>
 						</li>
 					</ul>
-					<ul className="nav navbar-nav flex-child-menu menu-right">
-						<li className="dropdown first">
-							<a className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-							pages <i className="fa fa-angle-down" aria-hidden="true"></i>
-							</a>
-							<ul className="dropdown-menu level1">
-								<li><a href="landing.html">Landing</a></li>
-								<li><a href="404.html">404 Page</a></li>
-								<li className="it-last"><a href="comingsoon.html">Coming soon</a></li>
-							</ul>
-						</li>                
-						<li><a href="#">Help</a></li>
-						<li className="loginLink"><a href="#">LOG In</a></li>
-						<li className="btn signupLink"><a href="#">sign up</a></li>
+					<ul className="nav navbar-nav flex-child-menu menu-right">               
+						<li><a href="#">Ayuda</a></li>
+						<li className="loginLink"><a href="#">Crear Cuenta</a></li>
+						<li className="btn signupLink"><a href="#">Iniciar Sesion</a></li>
 					</ul>
 				</div>
 			
@@ -190,11 +175,7 @@ function App() {
 	    
 	   
 	    <div className="top-search">
-	    	<select>
-				<option value="united">TV show</option>
-				<option value="saab">Others</option>
-			</select>
-			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for"/>
+			<input type="text" placeholder="Buscar Pelicula o Serie"/>
 	    </div>
 	</div>
 </header>
@@ -205,10 +186,9 @@ function App() {
 		<div className="row">
 			<div className="col-md-12">
 				<div className="hero-ct">
-					<h1> movie listing - list</h1>
+					<h1> Inicio</h1>
 					<ul className="breadcumb">
-						<li className="active"><a href="#">Home</a></li>
-						<li> <span className="ion-ios-arrow-right"></span> movie listing</li>
+						<li className="active"><a href="#">Inicio</a></li>
 					</ul>
 				</div>
 			</div>
@@ -221,14 +201,12 @@ function App() {
 			<div className="col-md-8 col-sm-12 col-xs-12">
 				<div className="topbar-filter">
 					<p>Found <span>1,608 movies</span> in total</p>
-					<label>Sort by:</label>
+					<label>Ordenar por:</label>
 					<select>
-						<option value="popularity">Popularity Descending</option>
-						<option value="popularity">Popularity Ascending</option>
-						<option value="rating">Rating Descending</option>
-						<option value="rating">Rating Ascending</option>
-						<option value="date">Release date Descending</option>
-						<option value="date">Release date Ascending</option>
+						<option value="popularity">Popularidad Descendente</option>
+						<option value="popularity">Popularidad Ascendente</option>
+						<option value="rating">Calificacion Descendente</option>
+						<option value="rating">Calificacion Ascendente</option>
 					</select>
 					<a href="movielist.html" className="list"><i className="ion-ios-list-outline active"></i></a>
 					<a  href="moviegrid.html" className="grid"><i className="ion-grid"></i></a>
@@ -289,13 +267,13 @@ function App() {
 					</div>
 				</div>
 				<div className="topbar-filter">
-					<label>Movies per page:</label>
+					<label>Peliculas por pagina:</label>
 					<select>
-						<option value="range">5 Movies</option>
-						<option value="saab">10 Movies</option>
+						<option value="range">5 Peliculas</option>
+						<option value="saab">10 Peliculas</option>
 					</select>
 					<div className="pagination2">
-						<span>Page 1 of 2:</span>
+						<span>Pagina 1 of 2:</span>
 						<a className="active" href="#">1</a>
 						<a href="#">2</a>
 						<a href="#"><i className="ion-arrow-right-b"></i></a>
@@ -305,24 +283,29 @@ function App() {
 			<div className="col-md-4 col-sm-12 col-xs-12">
 				<div className="sidebar">
 					<div className="searh-form">
-						<h4 className="sb-title">Search for movie</h4>
+						<h4 className="sb-title">Busqueda por pelicula</h4>
 						<form className="form-style-1" action="#">
 							<div className="row">
 								<div className="col-md-12 form-it">
-									<label>Movie name</label>
+									<label>Titulo</label>
 									<input type="text" placeholder="Enter keywords"/>
 								</div>
 								<div className="col-md-12 form-it">
-									<label>Genres & Subgenres</label>
+									<label>Categoria</label>
 									<div className="group-ip">
 										<select
 											name="skills" multiple="" className="ui fluid dropdown">
-											<option value="">Enter to filter genres</option>
-											<option value="Action1">Action 1</option>
-					                        <option value="Action2">Action 2</option>
-					                        <option value="Action3">Action 3</option>
-					                        <option value="Action4">Action 4</option>
-					                        <option value="Action5">Action 5</option>
+											<option value="">Elije una categoria</option>
+											<option value="Action1">Drama</option>
+					                        <option value="Action2">Comedia</option>
+					                        <option value="Action3">Fantasia</option>
+					                        <option value="Action4">Accion</option>
+					                        <option value="Action5">Anime</option>
+											<option value="Action1">Documental</option>
+					                        <option value="Action2">Ciencia Ficcion</option>
+					                        <option value="Action3">Suspenso</option>
+					                        <option value="Action4">Terror</option>
+					                        <option value="Action5">Familiar</option>
 										</select>
 									</div>
 									
@@ -392,9 +375,8 @@ function App() {
 		<div className="flex-parent-ft">
 			<div className="flex-child-ft item1">
 				 <a href="index-2.html"><img className="logo" src="images/logo1.png" alt=""/></a>
-				 <p>5th Avenue st, manhattan<br/>
-				New York, NY 10001</p>
-				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+				 <p>Blvd. Gral. Marcelino García Barragán 1421, Olímpica<br/>
+				 44430 Guadalajara, Jal.</p>
 			</div>
 			<div className="flex-child-ft item2">
 				<h4>Resources</h4>
@@ -430,7 +412,7 @@ function App() {
 				<form action="#">
 					<input type="text" placeholder="Enter your email..."/>
 				</form>
-				<a href="#" className="btn">Subscribe now <i className="ion-ios-arrow-forward"></i></a>
+				<a href="#" className="btn">Suscribete ahora <i className="ion-ios-arrow-forward"></i></a>
 			</div>
 		</div>
 	</div>
@@ -439,7 +421,7 @@ function App() {
 			<p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
 		</div>
 		<div className="backtotop">
-			<p><a href="#" id="back-to-top">Back to top  <i className="ion-ios-arrow-thin-up"></i></a></p>
+			<p><a href="#" id="back-to-top">Regresar al Inicio <i className="ion-ios-arrow-thin-up"></i></a></p>
 		</div>
 	</div>
 </footer>
