@@ -1,0 +1,110 @@
+:root {
+  --Dark-blue: hsl(223, 30%, 9%);
+  --Red: hsl(0, 97%, 63%);
+  --Greyish-blue: hsl(223, 23%, 46%);
+  --Semi-dark-blue: hsl(223, 36%, 14%);
+  --Pure-white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  background: var(--Dark-blue);
+  color: var(--Pure-white);
+  font-weight: 300;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+hr {
+  border: 0.5px solid var(--Semi-dark-blue);
+  margin: 0 0 2rem;
+}
+
+@media (min-width: 48em) {
+  body {
+    font-size: 1rem;
+  }
+  main {
+    width: 93.75%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+/* ==============
+Progress bar styles 
+==================*/
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: var(--Red);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+@media (min-width: 48em) {
+  #nprogress .bar {
+    height: 5px;
+  }
+
+  .noScroll {
+    overflow: visible;
+  }
+}
+
+@media (min-width: 75em) {
+  main {
+    margin: 4rem 2.25rem 0 11rem;
+    width: unset;
+  }
+}
+
+/* Safari 15+ displays a gray border while loading. Solution at https://nextjs.org/docs/api-reference/next/future/image */
+
+@media not all and (min-resolution: 0.001dpcm) {
+  img[loading="lazy"] {
+    clip-path: inset(0.5px);
+  }
+}
