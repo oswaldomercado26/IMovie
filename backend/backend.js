@@ -7,6 +7,7 @@ const Model=require('./Schema.js')
 
 const mongoose=require('mongoose');
 const LoginSchema = require('./LoginSchema.js');
+mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://localhost:27017/imovie').then(
     console.log('connected')
 )
