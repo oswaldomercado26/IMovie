@@ -1,10 +1,9 @@
-import { Express } from "express";
-import cors from "cors";
-import UserRoute from "./routes/UserRoute.js"
+const app = require("./app");
+require("./database/database");
 
-const app= express();
-app.use(cors());
-app.use(express.json());
-app.use(UserRoute);
+async function main(){
+    await app.listen(app.get("port"))
+    console.log(`App is running on port ${app.get("port")}`)
+}
 
-app.listen(5000,()=>console.log("servidor funcionando"));
+main()
