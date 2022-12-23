@@ -17,7 +17,7 @@ password:{
 },
 role:{
     type:String,
-    default:"admin"
+    default:"user"
 }
 
 
