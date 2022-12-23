@@ -52,7 +52,7 @@ async function MovieDatas(){
 
   return (
     <>
-{Loader?<><h1>Loading</h1></>:<div  className=''>
+{Loader?<><h1>Cargando</h1></>:<div  className=''>
 <Head/>
 <div  className="movieheight row col-lg-12 MoviePageMain">
 <div className='movieheight col-lg-6'>

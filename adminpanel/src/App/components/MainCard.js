@@ -5,6 +5,7 @@ import windowSize from 'react-window-size';
 import Aux from "../../hoc/_Aux";
 import DEMO from "../../store/constant";
 
+
 class MainCard extends Component {
     state = {
         isOption: this.props.isOption,
