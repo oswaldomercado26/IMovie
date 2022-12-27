@@ -1,3 +1,14 @@
-My tmdb clone (still in progress). In order to log in you have to create an account here -> https://www.themoviedb.org/.
+Proyecto de guia de streaming con las tecnologias
+Node, TypeScript, mongo, Express, Consumir un api
 
-run npm start
+npm install
+
+run
+npm start
+
+Por hacer
+Filtro Streaming
+Panel de Usuario y admin
+añadir a gustos de los usuarios
+mostrar recomendaciones al usuario
+
