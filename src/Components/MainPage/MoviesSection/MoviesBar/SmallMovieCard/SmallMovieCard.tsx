@@ -6,7 +6,7 @@ import MoreButton from "../../../MoreButton/MoreButton";
 import {mediaType} from "../../../../../Types/Types";
 
 
-
+//crear interface de las cartas 
 interface smallMovieCard {
     imageUrl: string
     title: string | undefined
@@ -15,7 +15,7 @@ interface smallMovieCard {
     id: number
     type:mediaType
 }
-
+//crear propiedad de las cartas de la portada pincipal en la cual traemos varias cosas
 const SmallMovieCard: FC<smallMovieCard> = ({imageUrl, title, date, rating, id,type}) => {
 
     const [highlighted, setHighlighted] = useState<boolean>(false)

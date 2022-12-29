@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import styles from './Header.module.css';
-
+import logo from '../../images/logo.png';
 import MainNav from '../MainNav/MainNav';
 import NavItem from '../MainNav/NavItem/NavItem';
 import ProfileMenu from '../Common/MenuVariants/ProfileMenu';
@@ -22,7 +22,7 @@ const Header: FC<HeaderProps> = ({authorized, username, logout, session_id}) => 
             <div className={styles.content}>
                 <div className={styles.logo}>
                     <NavLink to={'/'}>
-                        <img src={'../../logo.png'} alt="IMobie"/>
+                        <img src={logo} alt="IMovie"/>
                     </NavLink>
                 </div>
                 <MainNav/>

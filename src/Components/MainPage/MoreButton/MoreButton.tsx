@@ -6,7 +6,7 @@ import MoreBtnMenu from "../../Common/MenuVariants/MoreBtnMenu";
 interface MoreButtonProps {
     id:number
 }
-
+//MoreButtonProps:crear propiedades de los botones
 const MoreButton:FC<MoreButtonProps> = ( {id}) => {
     const [highlighted,setHighlighted] = useState(false);
     const [openMenu,setOpenMenu] = useState(false);
@@ -16,7 +16,7 @@ const MoreButton:FC<MoreButtonProps> = ( {id}) => {
     const highlightToggle = ()=> {
         setHighlighted(p=>!p)
     }
-
+//crear los eventos de los clicks de los eventos
     const btnStyle = highlighted ? styles.highlighted_btn : styles.btn;
     return (
         <div

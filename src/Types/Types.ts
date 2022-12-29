@@ -1,5 +1,5 @@
 //GENERAL TYPES
-
+//variables globales 
 
 
 export type labels =

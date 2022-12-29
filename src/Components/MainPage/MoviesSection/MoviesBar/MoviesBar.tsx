@@ -4,7 +4,7 @@ import SmallMovieCard from './SmallMovieCard/SmallMovieCard';
 import styles from './MoviesBar.module.css';
 import {uniqueFunc} from "../../../../Utils/Utils";
 
-
+//crear interface de los movies list que son las que se desplazan en la primera hoja
 interface MovieContainerProps {
     data: MovieBarData[] | MovieDetails[] | TVDetails[]
     imgBaseUrl: string
@@ -14,6 +14,7 @@ interface MovieContainerProps {
 const MoviesBar: FC<MovieContainerProps> = ({data, imgBaseUrl}) => {
 
     const dataToAny = data as any[]
+    // crear arreglo con las opciones
     const uniqueData = uniqueFunc(dataToAny) as MovieBarData[] | MovieDetails[] | TVDetails[] |null
 
     let cards

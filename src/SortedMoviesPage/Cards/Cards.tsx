@@ -13,7 +13,7 @@ type CardsProps = {
     sortingType: filterType
     mediaType: mediaType
 }
-
+//propiedades creadas para los filtros sobre las tarjetas
 const Cards: FC<CardsProps> = (props) => {
     return (
         //@ts-ignore
