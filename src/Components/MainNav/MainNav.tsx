@@ -6,7 +6,7 @@ import TVmenu from "../Common/MenuVariants/TVmenu";
 import PeopleMenu from "../Common/MenuVariants/PeopleMenu";
 import Moremenu from "../Common/MenuVariants/MoreMenu";
 
-
+//poner las opciones que van dentro del navbar
 
 const MainNav:FC = () => {
 

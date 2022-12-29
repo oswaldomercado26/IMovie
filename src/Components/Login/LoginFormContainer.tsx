@@ -4,7 +4,7 @@ import {RootState} from "../../redux/store";
 import {LogInThunk} from "../../redux/reducers/authReducer";
 import LoginForm from "./LoginForm";
 
-
+//login que realiza las cosas para poder enviar los datos de los componentes
 const LoginFormContainer:FC<ReduxProps> = (props) => {
     return (
       <LoginForm authorized={props.authorized} submitAuthData={props.LogInThunk}/>

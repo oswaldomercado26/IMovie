@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 
 
-
+//funciones desplegables de los actores
 const ProfileMenu:FC = () => {
     const data = [
         {text: 'Discusiones', url: '/u'},

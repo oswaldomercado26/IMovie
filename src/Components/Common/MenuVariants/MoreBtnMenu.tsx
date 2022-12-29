@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 
-
+//funciones desplegables de las peliculas 
 const MoreBtnMenu:FC = () => {
     const data = [
         {text: 'Añadir a la lista', url: '/leaderboard'},

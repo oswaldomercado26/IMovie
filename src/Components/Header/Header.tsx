@@ -14,15 +14,15 @@ interface HeaderProps {
     session_id: string
 }
 
-
+// HeaderProps;Los enlaces de navegación que se incluirán en el encabezado.
 const Header: FC<HeaderProps> = ({authorized, username, logout, session_id}) => {
-
+//retorna la cabecera con los elementos
     return (
         <header>
             <div className={styles.content}>
                 <div className={styles.logo}>
                     <NavLink to={'/'}>
-                        <img src={'../../logo.png'} alt="not found"/>
+                        <img src={'../../logo.png'} alt="IMobie"/>
                     </NavLink>
                 </div>
                 <MainNav/>

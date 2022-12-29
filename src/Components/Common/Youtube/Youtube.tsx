@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 type YoutubeProps = {
     url:string
 }
-
+// YoutubeProps;sirve para traer la vista de youtube y determinamos desde el tamaño y el ancho y como se van a mostrar
 const YoutubeEmbed:FC<YoutubeProps> = ({url}) => {
     return (
         <div className="video-responsive">

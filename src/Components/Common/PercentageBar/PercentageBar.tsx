@@ -4,7 +4,7 @@ interface PercentageProps {
     rating: number
     size: number
 }
-
+// PercentageProps:Componente de reacción que informa el porcentaje de desplazamiento actual de un elemento dentro de la ventana gráfica.
 const PercentageBar: FC<PercentageProps> = ({rating, size}) => {
 
     const canvasRef = useRef<HTMLCanvasElement>(null);

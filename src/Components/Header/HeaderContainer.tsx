@@ -5,7 +5,7 @@ import Header from './Header';
 import {LogOutThunk} from '../../redux/reducers/authReducer';
 
 
-
+//trae todos los componentes de header para poder utilizarlos
 
 const HeaderContainer:FC<ReduxProps> = (props) => {
     return (

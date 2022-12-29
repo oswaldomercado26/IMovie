@@ -5,16 +5,16 @@ import {LoginData} from "../../Types/Types";
 import styles from './Login.module.css';
 import {Redirect} from 'react-router-dom';
 
-
+//crear propiedades delas listas 
 type LoginFormProps = {
     authorized: boolean
     submitAuthData: (data: LoginData) => Promise<string | undefined>
 }
 
 const LoginForm: FC<LoginFormProps> = (props) => {
-
+//crear el login enviando las cosas falta terminar
     const {register, handleSubmit, formState: {errors}, setError} = useForm<LoginData>({mode: 'onBlur'});
-
+//sincronizar y enviar las cosas que el usuario puso
     const onSubmit = handleSubmit(async (data) => {
         const response = await props.submitAuthData(data);
         setError('password', {type: 'string', message: response});

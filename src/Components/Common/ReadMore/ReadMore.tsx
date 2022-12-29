@@ -5,12 +5,13 @@ type ReadMoreProps = {
     text: string
     visibleLength: number
 }
-
+//ReadMoreProps:Esta función es un componente React válido porque acepta un solo argumento de objeto "props" (que significa propiedades) con datos y devuelve un elemento React. 
 const ReadMore: FC<ReadMoreProps> = ({text, visibleLength}) => {
 
     const initialText = text.slice(0, visibleLength + 1);
     const showButtonText = 'Lee mas...';
     const hideButtonText = 'Ocultar';
+    // se crean estados con las opciones para asi crear acciones de los clicks
     const [visible, setVisible] = useState(false);
     const [visibleText, setVisibleText] = useState(initialText);
     const [buttonText, setButtonText] = useState(showButtonText);

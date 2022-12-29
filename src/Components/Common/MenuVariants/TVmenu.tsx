@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 
-
+//funciones desplegables de las series
 const TVmenu:FC = () => {
     const data = [
         {text: 'Popular', url: '/tv/option/popular'},

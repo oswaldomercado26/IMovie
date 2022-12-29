@@ -6,7 +6,7 @@ export enum LinkItemStyles {
     main = 'main',
     dropdown = 'dropdown'
 }
-
+//crea la interfarce de los link
 interface LinkItemProps {
     text:string|undefined
     url:string
@@ -14,7 +14,7 @@ interface LinkItemProps {
     onCLick?:(args:any)=>any
     variant:LinkItemStyles
 }
-
+//LinkItemProps El LinkItemcomponente representa un elemento envuelto en una etiqueta de anclaje , lo <a>que resulta útil cuando se desea pasar a otra página.
 const LinkItem:FC<LinkItemProps> = ({text,url,addStyle,onCLick,variant,children}) => {
     // @ts-ignore
     const variantStyles = addStyle ? `${styles[variant]} ${addStyle}` : styles[variant];
