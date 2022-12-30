@@ -4,7 +4,7 @@ import MoviesSection from "./MoviesSection/MoviesSection";
 import TrailersBar from "./MoviesSection/TrailersBar/TrailersBar";
 import SearchSection from './SearchSection/SearchSection';
 import {backgroundUrls} from '../../Utils/Utils';
-
+import StreamingPlatform from '../Plataform/StreamingPlatforms'
 
 interface MainPageProps {
     dayTrendTV: TVListObject[]|TVDetails[],
@@ -37,6 +37,7 @@ const MainPage: FC<MainPageProps> = (props) => {
     return (
         <div>
             <SearchSection setQuery={props.setQuery} urls={backgroundUrls}/>
+            <StreamingPlatform  />
             <MoviesSection data={popularData} title={'Popular'} url={props.url}/>
             <MoviesSection data={trendingMovieData} title={'Tendencias de películas'} url={props.url}/>
             <TrailersBar data={props.trailers} title={'Últimos avances'}/>
