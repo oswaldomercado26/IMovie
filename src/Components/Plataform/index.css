@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+.section {
+  width: 100%;
+  height: fit-content;
+}
+
+.react-multiple-carousel__arrow--right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+}
+
+.react-multiple-carousel__arrow--left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 768px){
+  .details-grid {
+    grid-template-columns: 1fr minmax(0,2fr);
+  }
+}

@@ -5,7 +5,7 @@ import {LoginData} from "../../Types/Types";
 import styles from './Login.module.css';
 import {Redirect} from 'react-router-dom';
 
-//crear propiedades delas listas 
+//crear propiedades de las listas 
 type LoginFormProps = {
     authorized: boolean
     submitAuthData: (data: LoginData) => Promise<string | undefined>
@@ -35,6 +35,7 @@ const LoginForm: FC<LoginFormProps> = (props) => {
 
                     {errors.username && <div className={styles.error}> {errors.username.message}</div>}
                 </div>
+                
 
                 <div>
                     <div>
@@ -45,8 +46,16 @@ const LoginForm: FC<LoginFormProps> = (props) => {
 
                     {errors.password && <div className={styles.error}> {errors.password.message}</div>}
                 </div>
-                <Button text={'Iniciar'}/> 
-              
+                <div>
+                    <div>
+                        <label htmlFor="username">Preferencias</label>
+                    </div>
+                    <input className={styles.loginInput} type="text"
+                           {...register('username', {required: 'Nombre del usuario requerido!'})}/>
+
+                    {errors.username && <div className={styles.error}> {errors.username.message}</div>}
+                </div>
+                <Button text={'Crear Cuenta'}/>
                 
             </form>
     );
