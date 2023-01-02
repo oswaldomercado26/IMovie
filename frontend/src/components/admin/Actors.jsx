@@ -9,6 +9,7 @@ import NextAndPrevButton from "../NextAndPrevButton";
 import NotFoundText from "../NotFoundText";
 
 let currentPageNo = 0;
+//limitar a 20 objetos por pagina
 const limit = 20;
 
 export default function Actors() {
@@ -33,7 +34,7 @@ export default function Actors() {
 
     setActors([...profiles]);
   };
-
+//accion de click para cambiar de pagina
   const handleOnNextClick = () => {
     if (reachedToEnd) return;
     currentPageNo += 1;
