@@ -5,7 +5,7 @@ const {
   topRatedMoviesPipeline,
   getAverageRatings,
 } = require("../utils/helper");
-
+//crud admin
 exports.getAppInfo = async (req, res) => {
   const movieCount = await Movie.countDocuments();
   const reviewCount = await Review.countDocuments();

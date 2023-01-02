@@ -10,7 +10,7 @@ const cloudinary = require("../cloud");
 const Movie = require("../models/movie");
 const Review = require("../models/review");
 const { isValidObjectId } = require("mongoose");
-
+//crud movie
 exports.uploadTrailer = async (req, res) => {
   const { file } = req;
   if (!file) return sendError(res, "Video file is missing!");

@@ -6,7 +6,7 @@ const {
   formatActor,
 } = require("../utils/helper");
 const cloudinary = require("../cloud");
-
+//crud actor
 exports.createActor = async (req, res) => {
   const { name, about, gender } = req.body;
   const { file } = req;
