@@ -113,9 +113,9 @@ export default function EmailVerification() {
       <Container>
         <form onSubmit={handleSubmit} className={commonModalClasses}>
           <div>
-            <Title>Please enter the OTP to verify your account</Title>
+            <Title>Ingrese la OTP para verificar su cuenta</Title>
             <p className="text-center dark:text-dark-subtle text-light-subtle">
-              OTP has been sent to your email
+              OTP ha sido enviado a su correo electrónico
             </p>
           </div>
 
