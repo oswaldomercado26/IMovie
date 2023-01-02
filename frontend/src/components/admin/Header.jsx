@@ -10,7 +10,7 @@ export default function Header({ onAddActorClick, onAddMovieClick }) {
   const { toggleTheme } = useTheme();
 
   const navigate = useNavigate();
-
+//crear arreglo de acciones 
   const options = [
     { title: "Add Movie", onClick: onAddMovieClick },
     { title: "Add Actor", onClick: onAddActorClick },
