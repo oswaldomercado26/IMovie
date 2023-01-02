@@ -39,10 +39,10 @@ export default function ForgetPassword() {
             onChange={handleChange}
             value={email}
             label="Email"
-            placeholder="john@email.com"
+            placeholder="Email"
             name="email"
           />
-          <Submit value="Send Link" />
+          <Submit value="Enviar Link" />
 
           <div className="flex justify-between">
             <CustomLink to="/auth/signin">Sign in</CustomLink>
