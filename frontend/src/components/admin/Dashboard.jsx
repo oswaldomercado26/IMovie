@@ -4,7 +4,7 @@ import { useNotification } from "../../hooks";
 import AppInfoBox from "../AppInfoBox";
 import LatestUploads from "../LatestUploads";
 import MostRatedMovies from "../MostRatedMovies";
-
+//exportar datos en el dashbord principal
 export default function Dashboard() {
   const [appInfo, setAppInfo] = useState({
     movieCount: 0,
@@ -13,7 +13,7 @@ export default function Dashboard() {
   });
 
   const { updateNotification } = useNotification();
-
+//crear errores de notificaciones
   const fetchAppInfo = async () => {
     const { appInfo, error } = await getAppInfo();
 
