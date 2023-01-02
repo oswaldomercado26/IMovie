@@ -99,7 +99,7 @@ export default function ActorForm({
           className="w-36 h-36 aspect-square object-cover"
           name="avatar"
           onChange={handleChange}
-          lable="Select avatar"
+          lable="Select foto de perfil"
           accept="image/jpg, image/jpeg, image/png"
         />
         <div className="flex-grow flex flex-col space-y-2">
@@ -112,7 +112,7 @@ export default function ActorForm({
             onChange={handleChange}
           />
           <textarea
-            name="about"
+            name="Sobre"
             value={about}
             onChange={handleChange}
             placeholder="About"
@@ -124,7 +124,7 @@ export default function ActorForm({
       <div className="mt-3">
         <Selector
           options={genderOptions}
-          label="Gender"
+          label="Genero"
           value={gender}
           onChange={handleChange}
           name="gender"
