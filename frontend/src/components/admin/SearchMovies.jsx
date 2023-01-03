@@ -47,7 +47,7 @@ export default function SearchMovies() {
 
   return (
     <div className="p-5 space-y-3">
-      <NotFoundText text="Record not found!" visible={resultNotFound} />
+      <NotFoundText text="Registro no encontrado!" visible={resultNotFound} />
       {!resultNotFound &&
         movies.map((movie) => {
           return (
