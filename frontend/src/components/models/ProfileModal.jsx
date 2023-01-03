@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getActorProfile } from "../../api/actor";
 import { useNotification } from "../../hooks";
 import ModalContainer from "./ModalContainer";
-
+//ventana del actor para su perfil
 export default function ProfileModal({ visible, profileId, onClose }) {
   const [profile, setProfile] = useState({});
 
