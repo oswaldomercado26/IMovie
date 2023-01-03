@@ -13,7 +13,7 @@ export default function AddRatingModal({ visible, onSuccess, onClose }) {
     const { error, message, reviews } = await addReview(movieId, data);
     if (error) return updateNotification("error", error);
 
-    updateNotification("success", message);
+    updateNotification("Satisfactorio", message);
     onSuccess(reviews);
     onClose();
   };
