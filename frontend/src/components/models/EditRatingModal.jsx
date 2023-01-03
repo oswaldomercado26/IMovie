@@ -21,7 +21,7 @@ export default function EditRatingModal({
     if (error) return updateNotification("error", error);
 
     onSuccess({ ...data });
-    updateNotification("success", message);
+    updateNotification("satisfactorio", message);
     onClose();
   };
 
