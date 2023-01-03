@@ -40,7 +40,7 @@ export default function GenresModal({
       <div className="flex flex-col justify-between h-full">
         <div>
           <h1 className="dark:text-white text-primary text-2xl font-semibold text-center">
-            Select Genres
+            Selecionar generos
           </h1>
 
           <div className="space-y-3">
