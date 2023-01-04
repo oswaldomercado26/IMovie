@@ -1,3 +1,5 @@
+//Hashear contraseñas y sube las imagenes a la nube
+
 const crypto = require("crypto");
 const cloudinary = require("../cloud");
 const Review = require("../models/review");
@@ -5,7 +7,7 @@ const Review = require("../models/review");
 exports.sendError = (res, error, statusCode = 401) =>
   res.status(statusCode).json({ error });
 
-exports.generateRandomByte = () => {
+exports.generateRandomByte = () => { //Se genera una contraseña random, se envia al usuario por correo
   return new Promise((resolve, reject) => {
     crypto.randomBytes(30, (err, buff) => {
       if (err) reject(err);
@@ -20,7 +22,7 @@ exports.handleNotFound = (req, res) => {
   this.sendError(res, "Not found", 404);
 };
 
-exports.uploadImageToCloud = async (file) => {
+exports.uploadImageToCloud = async (file) => { //sincronizar y actualizar todas las imagenes en la nube
   const { secure_url: url, public_id } = await cloudinary.uploader.upload(
     file,
     { gravity: "face", height: 500, width: 500, crop: "thumb" }
@@ -29,7 +31,7 @@ exports.uploadImageToCloud = async (file) => {
   return { url, public_id };
 };
 
-exports.formatActor = (actor) => {
+exports.formatActor = (actor) => {//Formato del actor
   const { name, gender, about, _id, avatar } = actor;
   return {
     id: _id,
@@ -40,7 +42,7 @@ exports.formatActor = (actor) => {
   };
 };
 
-exports.parseData = (req, res, next) => {
+exports.parseData = (req, res, next) => {//Conversion de datos string-int
   const { trailer, cast, genres, tags, writers } = req.body;
   if (trailer) req.body.trailer = JSON.parse(trailer);
   if (cast) req.body.cast = JSON.parse(cast);
@@ -51,7 +53,7 @@ exports.parseData = (req, res, next) => {
   next();
 };
 
-exports.averageRatingPipeline = (movieId) => {
+exports.averageRatingPipeline = (movieId) => {//Exporta el rating
   return [
     {
       $lookup: {
@@ -78,7 +80,7 @@ exports.averageRatingPipeline = (movieId) => {
   ];
 };
 
-exports.relatedMovieAggregation = (tags, movieId) => {
+exports.relatedMovieAggregation = (tags, movieId) => {//Hacen match para hacer recomendaciones de peliculas
   return [
     {
       $lookup: {
@@ -107,7 +109,7 @@ exports.relatedMovieAggregation = (tags, movieId) => {
   ];
 };
 
-exports.topRatedMoviesPipeline = (type) => {
+exports.topRatedMoviesPipeline = (type) => {//Obtiene el top 10 de peliculas de publicas publicas
   const matchOptions = {
     reviews: { $exists: true },
     status: { $eq: "public" },
@@ -141,12 +143,12 @@ exports.topRatedMoviesPipeline = (type) => {
       },
     },
     {
-      $limit: 5,
+      $limit: 10,
     },
   ];
 };
 
-exports.getAverageRatings = async (movieId) => {
+exports.getAverageRatings = async (movieId) => {//Se encarga de estar actualizando el rating
   const [aggregatedResponse] = await Review.aggregate(
     this.averageRatingPipeline(movieId)
   );

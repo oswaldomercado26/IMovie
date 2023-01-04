@@ -1,5 +1,5 @@
 export const isValidEmail = (email) => {
-  const isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//regex
 
   return isValid.test(email);
 };
@@ -13,7 +13,7 @@ export const catchError = (error) => {
   return { error: error.message || error };
 };
 
-export const renderItem = (result) => {
+export const renderItem = (result) => {//Renderiza el tamaño de las imagenes para que se posiciones en una ubicacion exacta
   return (
     <div className="flex rounded overflow-hidden">
       <img src={result.avatar} alt="" className="w-16 h-16 object-cover" />

@@ -2,24 +2,16 @@
 
 const express = require("express");
 const {
-  uploadTrailer,
-  createMovie,
-  updateMovieWithoutPoster,
-  updateMovie,
-  removeMovie,
-  getMovies,
-  getMovieForUpdate,
-  searchMovies,
-  getLatestUploads,
-  getSingleMovie,
-  getRelatedMovies,
-  getTopRatedMovies,
-  searchPublicMovies,
-} = require("../controllers/movie");
+  createPlatform,
+  updatePlatformWithoutPoster,
+  updatePlatform,
+  removePlatform,
+ 
+} = require("../controllers/platform");
 const { isAuth, isAdmin } = require("../middlewares/auth");
 const { uploadVideo, uploadImage } = require("../middlewares/multer");
 const {
-  validateMovie,
+  validatePlatform,
   validate,
   validateTrailer,
 } = require("../middlewares/validator");
@@ -39,40 +31,40 @@ router.post(
   isAdmin,
   uploadImage.single("poster"),
   parseData,
-  validateMovie,
+  validatePlatform,
   validateTrailer,
   validate,
-  createMovie
+  createPlatform
 );
 // router.patch(
-//   "/update-movie-without-poster/:movieId",
+//   "/update-Platform-without-poster/:PlatformId",
 //   isAuth,
 //   isAdmin,
 //   // parseData,
-//   validateMovie,
+//   validatePlatform,
 //   validate,
-//   updateMovieWithoutPoster
+//   updatePlatformWithoutPoster
 // );
 router.patch(
-  "/update/:movieId",
+  "/update/:PlatformId",
   isAuth,
   isAdmin,
   uploadImage.single("poster"),
   parseData,
-  validateMovie,
+  validatePlatform,
   validate,
-  updateMovie
+  updatePlatform
 );
-router.delete("/:movieId", isAuth, isAdmin, removeMovie);
-router.get("/movies", isAuth, isAdmin, getMovies);
-router.get("/for-update/:movieId", isAuth, isAdmin, getMovieForUpdate);
-router.get("/search", isAuth, isAdmin, searchMovies);
+router.delete("/:PlatformId", isAuth, isAdmin, removePlatform);
+router.get("/Platforms", isAuth, isAdmin, getPlatforms);
+router.get("/for-update/:PlatformId", isAuth, isAdmin, getPlatformForUpdate);
+router.get("/search", isAuth, isAdmin, searchPlatforms);
 
 // for normal users
 router.get("/latest-uploads", getLatestUploads);
-router.get("/single/:movieId", getSingleMovie);
-router.get("/related/:movieId", getRelatedMovies);
-router.get("/top-rated", getTopRatedMovies);
-router.get("/search-public", searchPublicMovies);
+router.get("/single/:PlatformId", getSinglePlatform);
+router.get("/related/:PlatformId", getRelatedPlatforms);
+router.get("/top-rated", getTopRatedPlatforms);
+router.get("/search-public", searchPublicPlatforms);
 
 module.exports = router;

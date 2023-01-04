@@ -1,15 +1,15 @@
-const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");//Sirve para que de un token unico cada vez que inicias o creas una sesion para identificar al usuario
 const User = require("../models/user");
 const EmailVerificationToken = require("../models/emailVerificationToken");
 const { isValidObjectId } = require("mongoose");
 const { generateOTP, generateMailTransporter } = require("../utils/mail");
-const { sendError, generateRandomByte } = require("../utils/helper");
+const { sendError, generateRandomByte } = require("../utils/helper");//Genera los aspectos random (contraseña, top, etc)
 const PasswordResetToken = require("../models/passwordResetToken");
 
 exports.create = async (req, res) => {
   const { name, email, password } = req.body;
 
-  const oldUser = await User.findOne({ email });
+  const oldUser = await User.findOne({ email });//Se verifica que el correo no este en uso
 
   if (oldUser) return sendError(res, "This email is already in use!");
 
@@ -17,7 +17,7 @@ exports.create = async (req, res) => {
   await newUser.save();
 
   // generate 6 digit otp
-  let OTP = generateOTP();
+  let OTP = generateOTP();//OTP One time password
 
   // store otp inside our db
   const newEmailVerificationToken = new EmailVerificationToken({

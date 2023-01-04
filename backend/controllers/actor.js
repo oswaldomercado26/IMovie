@@ -14,7 +14,7 @@ exports.createActor = async (req, res) => {
   const newActor = new Actor({ name, about, gender });
 
   if (file) {
-    const { url, public_id } = await uploadImageToCloud(file.path);
+    const { url, public_id } = await uploadImageToCloud(file.path);//uploadImageToCloud sincroniza la imagen en la nube
     newActor.avatar = { url, public_id };
   }
   await newActor.save();
@@ -127,3 +127,4 @@ exports.getActors = async (req, res) => {
     profiles,
   });
 };
+ //las imagenes se guardan en la nube para bajar costos de almacenamien to en la bd

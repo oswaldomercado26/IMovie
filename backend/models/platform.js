@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //crear conexion de plataformas
-const movieSchema = mongoose.Schema(
+const platformSchema = mongoose.Schema(
   {
     title: {
       type: String,
@@ -23,4 +23,4 @@ const movieSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Platform", movieSchema);
+module.exports = mongoose.model("Platform", platformSchema);

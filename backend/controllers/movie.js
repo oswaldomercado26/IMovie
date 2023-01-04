@@ -40,6 +40,7 @@ exports.createMovie = async (req, res) => {
     writers,
     trailer,
     language,
+    platform
   } = body;
 
   const newMovie = new Movie({
@@ -53,6 +54,7 @@ exports.createMovie = async (req, res) => {
     cast,
     trailer,
     language,
+    platform
   });
 
   if (director) {
@@ -109,7 +111,7 @@ exports.createMovie = async (req, res) => {
     },
   });
 };
-
+//actualizar el poster
 exports.updateMovieWithoutPoster = async (req, res) => {
   const { movieId } = req.params;
 
