@@ -203,7 +203,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
       <div onSubmit={handleSubmit} className="flex space-x-3">
         <div className="w-[70%] space-y-5">
           <div>
-            <Label htmlFor="title">Title</Label>
+            <Label htmlFor="title">Titulo</Label>
             <input
               id="title"
               value={title}
@@ -218,7 +218,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
           </div>
 
           <div>
-            <Label htmlFor="storyLine">Story line</Label>
+            <Label htmlFor="storyLine">Sipnosis</Label>
             <textarea
               value={storyLine}
               onChange={handleChange}
@@ -230,7 +230,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
           </div>
 
           <div>
-            <Label htmlFor="tags">Tags</Label>
+            <Label htmlFor="tags">Etiquetas</Label>
             <TagsInput value={tags} name="tags" onChange={updateTags} />
           </div>
 
@@ -245,7 +245,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
                 onClick={displayWritersModal}
                 visible={writers.length}
               >
-                View All
+                Ver todos
               </ViewAllBtn>
             </div>
             <WriterSelector onSelect={updateWriters} />
@@ -254,7 +254,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
           <div>
             <div className="flex justify-between">
               <LabelWithBadge badge={cast.length}>
-                Add Cast & Crew
+                Agregar elenco y equipo
               </LabelWithBadge>
               <ViewAllBtn onClick={displayCastModal} visible={cast.length}>
                 View All

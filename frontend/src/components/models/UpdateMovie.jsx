@@ -16,7 +16,7 @@ export default function UpdateMovie({ movieId, visible, onSuccess }) {
     setBusy(false);
     if (error) return updateNotification("error", error);
 
-    updateNotification("success", message);
+    updateNotification("actualizado", message);
     onSuccess(movie);
   };
 
@@ -43,7 +43,7 @@ export default function UpdateMovie({ movieId, visible, onSuccess }) {
       ) : (
         <div className="w-full h-full flex justify-center items-center">
           <p className="text-light-subtle dark:text-dark-subtle animate-pulse text-xl">
-            Please wait...
+            Espera...
           </p>
         </div>
       )}

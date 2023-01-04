@@ -21,7 +21,7 @@ export default function ConfirmModal({
           {busy ? (
             <p className="flex items-center space-x-2 text-primary dark:text-white">
               <ImSpinner3 className="animate-spin" />
-              <span>Please wait</span>
+              <span>Espera</span>
             </p>
           ) : (
             <>
@@ -30,14 +30,14 @@ export default function ConfirmModal({
                 type="button"
                 className={commonClass + " bg-red-400"}
               >
-                Confirm
+                Confirmar
               </button>
               <button
                 onClick={onCancel}
                 type="button"
                 className={commonClass + " bg-blue-400"}
               >
-                Cancel
+                Cancelar
               </button>
             </>
           )}

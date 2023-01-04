@@ -80,7 +80,7 @@ export default function ConfirmPassword() {
         <Container>
           <div className="flex space-x-2 items-center">
             <h1 className="text-4xl font-semibold dark:text-white text-primary">
-              Please wait we are verifying your token!
+              Espere, estamos verificando su token!
             </h1>
             <ImSpinner3 className="animate-spin text-4xl dark:text-white text-primary" />
           </div>
@@ -93,7 +93,7 @@ export default function ConfirmPassword() {
       <FormContainer>
         <Container>
           <h1 className="text-4xl font-semibold dark:text-white text-primary">
-            Sorry the token is invalid!
+            Lo siento, el token no es válido!
           </h1>
         </Container>
       </FormContainer>
@@ -103,7 +103,7 @@ export default function ConfirmPassword() {
     <FormContainer>
       <Container>
         <form onSubmit={handleSubmit} className={commonModalClasses + " w-96"}>
-          <Title>Enter New Password</Title>
+          <Title>Ingreasar nueva contraseña</Title>
           <FormInput
             value={password.one}
             onChange={handleChange}
@@ -120,7 +120,7 @@ export default function ConfirmPassword() {
             name="two"
             type="password"
           />
-          <Submit value="Confirm Password" />
+          <Submit value="Confirmar contraseña" />
         </form>
       </Container>
     </FormContainer>

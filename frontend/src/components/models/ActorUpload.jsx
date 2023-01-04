@@ -15,7 +15,7 @@ export default function ActorUpload({ visible, onClose }) {
     setBusy(false);
     if (error) return updateNotification("error", error);
 
-    updateNotification("success", "Actor created successfully.");
+    updateNotification("success", "Actor creado satisfactoriamente.");
     onClose();
   };
 
@@ -23,7 +23,7 @@ export default function ActorUpload({ visible, onClose }) {
     <ModalContainer visible={visible} onClose={onClose} ignoreContainer>
       <ActorForm
         onSubmit={!busy ? handleSubmit : null}
-        title="Create New Actor"
+        title="Crear nuevo actor"
         btnTitle="Create"
         busy={busy}
       />
