@@ -2,9 +2,8 @@
 
 const express = require("express");
 const {
+  //uploadPlatform
   createPlatform,
-  updatePlatformWithoutPoster,
-  updatePlatform,
   removePlatform,
  
 } = require("../controllers/platform");
