@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 
 export const NotificationContext = createContext();
-
+//creamos notificaciones para el usuario de cosas que le pueden pasar
 let timeoutId;
 export default function NotificationProvider({ children }) {
   const [notification, setNotification] = useState("");
