@@ -30,7 +30,7 @@ export default function DirectorSelector({ onSelect }) {
       <LiveSearch
         name="director"
         value={value}
-        placeholder="Search profile"
+        placeholder="Buscar Actor"
         results={profiles}
         renderItem={renderItem}
         onSelect={handleOnSelect}

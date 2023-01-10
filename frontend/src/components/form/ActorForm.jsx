@@ -13,9 +13,9 @@ const defaultActorInfo = {
 };
 
 const genderOptions = [
-  { title: "Male", value: "male" },
-  { title: "Female", value: "female" },
-  { title: "Other", value: "other" },
+  { title: "Male", value: "Hombre" },
+  { title: "Female", value: "Mujer" }
+  
 ];
 
 const validateActor = ({ avatar, name, about, gender }) => {

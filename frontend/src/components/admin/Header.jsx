@@ -41,7 +41,7 @@ export default function Header({ onAddActorClick, onAddMovieClick }) {
           onClick={() => setShowOptions(true)}
           className="flex items-center space-x-2 dark:border-dark-subtle border-light-subtle dark:text-dark-subtle text-light-subtle hover:opacity-80 transition font-semibold border-2 rounded text-lg px-3 py-1"
         >
-          <span>Create</span>
+          <span>Crear</span>
           <AiOutlinePlus />
         </button>
 

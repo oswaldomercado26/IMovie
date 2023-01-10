@@ -213,7 +213,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
               className={
                 commonInputClasses + " border-b-2 font-semibold text-xl"
               }
-              placeholder="Titanic"
+              placeholder="Titulo"
             />
           </div>
 
@@ -225,12 +225,12 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
               name="storyLine"
               id="storyLine"
               className={commonInputClasses + " border-b-2 resize-none h-24"}
-              placeholder="Movie storyline..."
+              placeholder="Sipnosis..."
             ></textarea>
           </div>
 
           <div>
-            <Label htmlFor="tags">Etiquetas</Label>
+            <Label htmlFor="tags">Plataformas</Label>
             <TagsInput value={tags} name="tags" onChange={updateTags} />
           </div>
 
@@ -264,7 +264,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
           </div>
 
           <input
-            type="date"
+            type="Fecha"
             className={commonInputClasses + " border-2 rounded p-1 w-auto"}
             onChange={handleChange}
             name="releseDate"

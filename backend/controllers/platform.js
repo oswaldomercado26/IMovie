@@ -74,10 +74,10 @@ exports.createPlatform = async (req, res) => {
 exports.removePlatform = async (req, res) => {
   const { platformId } = req.params;
 
-  if (!isValidObjectId(platformId)) return sendError(res, "Invalid platform ID!");
+  if (!isValidObjectId(platformId)) return sendError(res, " ID invalido!");
 
   const platform = await platform.findById(platformId);
-  if (!platform) return sendError(res, "platform Not Found!", 404);
+  if (!platform) return sendError(res, "plataforma invalida!", 404);
 
   // check if there is poster or not.
   // if yes then we need to remove that.

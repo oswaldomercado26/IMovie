@@ -34,7 +34,7 @@ export default function Navbar() {
             </li>
             <li>
               <AppSearchForm
-                placeholder="search..."
+                placeholder="Buscar..."
                 inputClassName="border-dark-subtle text-white focus:border-white sm:w-auto w-40 sm:text-lg"
                 onSubmit={handleSearchSubmit}
               />
