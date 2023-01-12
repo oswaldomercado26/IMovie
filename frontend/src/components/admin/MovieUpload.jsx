@@ -8,7 +8,7 @@ import MovieForm from "./MovieForm";
 
 export default function MovieUpload({ visible, onClose }) {
   const [videoSelected, setVideoSelected] = useState(false);
-  const [videoUploaded, setVideoUploaded] = useState(false);
+ // const [videoUploaded, setVideoUploaded] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [videoInfo, setVideoInfo] = useState({});
   const [busy, setBusy] = useState(false);
@@ -16,8 +16,8 @@ export default function MovieUpload({ visible, onClose }) {
   const { updateNotification } = useNotification();
 
   const resetState = () => {
-    setVideoSelected(false);
-    setVideoUploaded(false);
+   // setVideoSelected(false);
+    //setVideoUploaded(false);
     setUploadProgress(0);
     setVideoInfo({});
   };
@@ -26,39 +26,39 @@ export default function MovieUpload({ visible, onClose }) {
     updateNotification("error", error);
   };
 
-  const handleUploadTrailer = async (data) => {
-    const { error, url, public_id } = await uploadTrailer(
-      data,
-      setUploadProgress
-    );
-    if (error) return updateNotification("error", error);
+  // const handleUploadTrailer = async (data) => {
+  //   const { error, url, public_id } = await uploadTrailer(
+  //     data,
+  //     setUploadProgress
+  //   );
+  //   if (error) return updateNotification("error", error);
 
-    setVideoUploaded(true);
-    setVideoInfo({ url, public_id });
-  };
+  //   setVideoUploaded(true);
+  //   setVideoInfo({ url, public_id });
+  // };
 
-  const handleChange = (file) => {
-    const formData = new FormData();
-    formData.append("video", file);
+  // const handleChange = (file) => {
+  //   const formData = new FormData();
+  //   formData.append("video", file);
 
-    setVideoSelected(true);
-    handleUploadTrailer(formData);
-  };
+  //   setVideoSelected(true);
+  //   handleUploadTrailer(formData);
+  // };
 
-  const getUploadProgressValue = () => {
-    if (!videoUploaded && uploadProgress >= 100) {
-      return "Processing";
-    }
+  // const getUploadProgressValue = () => {
+  //   if (!videoUploaded && uploadProgress >= 100) {
+  //     return "Processing";
+  //   }
 
-    return `Upload progress ${uploadProgress}%`;
-  };
+  //   return `Upload progress ${uploadProgress}%`;
+  // };
 
   const handleSubmit = async (data) => {
-    if (!videoInfo.url || !videoInfo.public_id)
-      return updateNotification("error", "Trailer is missing!");
+    // if (!videoInfo.url || !videoInfo.public_id)
+    //   return updateNotification("error", "Trailer is missing!");
 
-    setBusy(true);
-    data.append("trailer", JSON.stringify(videoInfo));
+    // setBusy(true);
+    // data.append("trailer", JSON.stringify(videoInfo));
     const { error, movie } = await uploadMovie(data);
     setBusy(false);
     if (error) return updateNotification("error", error);
@@ -72,12 +72,13 @@ export default function MovieUpload({ visible, onClose }) {
     <ModalContainer visible={visible}>
       <div className="mb-5">
         <UploadProgress
-          visible={!videoUploaded && videoSelected}
-          message={getUploadProgressValue()}
+         // visible={!videoUploaded && videoSelected}
+          //message={getUploadProgressValue()}
           width={uploadProgress}
         />
       </div>
-      {!videoSelected ? (
+      <MovieForm busy={busy} onSubmit={!busy ? handleSubmit : null} />
+      {/* {!videoSelected ? (
         <TrailerSelector
           visible={!videoSelected}
           onTypeError={handleTypeError}
@@ -85,29 +86,29 @@ export default function MovieUpload({ visible, onClose }) {
         />
       ) : (
         <MovieForm busy={busy} onSubmit={!busy ? handleSubmit : null} />
-      )}
+      )} */}
     </ModalContainer>
   );
 }
 
-const TrailerSelector = ({ visible, handleChange, onTypeError }) => {
-  if (!visible) return null;
+// const TrailerSelector = ({ visible, handleChange, onTypeError }) => {
+//   if (!visible) return null;
 
-  return (
-    <div className="h-full flex items-center justify-center">
-      <FileUploader
-        handleChange={handleChange}
-        onTypeError={onTypeError}
-        types={["mp4", "avi"]}
-      >
-        <label className="w-48 h-48 border border-dashed dark:border-dark-subtle border-light-subtle rounded-full flex flex-col items-center justify-center dark:text-dark-subtle text-secondary cursor-pointer">
-          <AiOutlineCloudUpload size={80} />
-          <p>Drop your file here!</p>
-        </label>
-      </FileUploader>
-    </div>
-  );
-};
+//   return (
+//     <div className="h-full flex items-center justify-center">
+//       <FileUploader
+//         handleChange={handleChange}
+//         onTypeError={onTypeError}
+//         types={["mp4", "avi"]}
+//       >
+//         <label className="w-48 h-48 border border-dashed dark:border-dark-subtle border-light-subtle rounded-full flex flex-col items-center justify-center dark:text-dark-subtle text-secondary cursor-pointer">
+//           <AiOutlineCloudUpload size={80} />
+//           <p>Drop your file here!</p>
+//         </label>
+//       </FileUploader>
+//     </div>
+//   );
+// };
 
 const UploadProgress = ({ width, message, visible }) => {
   if (!visible) return null;

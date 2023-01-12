@@ -11,18 +11,18 @@ const Movie = require("../models/movie");
 const Review = require("../models/review");
 const { isValidObjectId } = require("mongoose");
 //crud movie
-exports.uploadTrailer = async (req, res) => {
-  const { file } = req;
-  if (!file) return sendError(res, "Video file is missing!");
+// exports.uploadTrailer = async (req, res) => {
+//   const { file } = req;
+//   if (!file) return sendError(res, "Video file is missing!");
 
-  const { secure_url: url, public_id } = await cloudinary.uploader.upload(
-    file.path,
-    {
-      resource_type: "video",
-    }
-  );
-  res.status(201).json({ url, public_id });
-};
+//   const { secure_url: url, public_id } = await cloudinary.uploader.upload(
+//     file.path,
+//     {
+//       resource_type: "video",
+//     }
+//   );
+//   res.status(201).json({ url, public_id });
+// };
 
 exports.createMovie = async (req, res) => {
   const { file, body } = req;
@@ -38,7 +38,7 @@ exports.createMovie = async (req, res) => {
     tags,
     cast,
     writers,
-    trailer,
+   // trailer,
     language,
     platform
   } = body;
@@ -52,7 +52,7 @@ exports.createMovie = async (req, res) => {
     genres,
     tags,
     cast,
-    trailer,
+   // trailer,
     language,
     platform
   });
@@ -131,7 +131,7 @@ exports.updateMovieWithoutPoster = async (req, res) => {
     tags,
     cast,
     writers,
-    trailer,
+   // trailer,
     language,
   } = req.body;
 
@@ -143,7 +143,7 @@ exports.updateMovieWithoutPoster = async (req, res) => {
   movie.type = type;
   movie.genres = genres;
   movie.cast = cast;
-  movie.trailer = trailer;
+ // movie.trailer = trailer;
   movie.language = language;
 
   if (director) {
@@ -188,7 +188,7 @@ exports.updateMovie = async (req, res) => {
     tags,
     cast,
     writers,
-    trailer,
+   // trailer,
     language,
   } = req.body;
 
@@ -292,13 +292,13 @@ exports.removeMovie = async (req, res) => {
   }
 
   // removing trailer
-  const trailerId = movie.trailer?.public_id;
-  if (!trailerId) return sendError(res, "Could not find trailer in the cloud!");
-  const { result } = await cloudinary.uploader.destroy(trailerId, {
-    resource_type: "video",
-  });
-  if (result !== "ok")
-    return sendError(res, "Could not remove trailer from cloud!");
+  // const trailerId = movie.trailer?.public_id;
+  // if (!trailerId) return sendError(res, "Could not find trailer in the cloud!");
+  // const { result } = await cloudinary.uploader.destroy(trailerId, {
+  //   resource_type: "video",
+  // });
+  // if (result !== "ok")
+  //   return sendError(res, "Could not remove trailer from cloud!");
 
   await Movie.findByIdAndDelete(movieId);
 
@@ -393,7 +393,7 @@ exports.getLatestUploads = async (req, res) => {
       storyLine: m.storyLine,
       poster: m.poster?.url,
       responsivePosters: m.poster.responsive,
-      trailer: m.trailer?.url,
+     // trailer: m.trailer?.url,
     };
   });
   res.json({ movies });
@@ -435,7 +435,7 @@ exports.getSingleMovie = async (req, res) => {
     tags,
     language,
     poster,
-    trailer,
+  //  trailer,
     type,
   } = movie;
 
@@ -450,7 +450,7 @@ exports.getSingleMovie = async (req, res) => {
       language,
       type,
       poster: poster?.url,
-      trailer: trailer?.url,
+     // trailer: trailer?.url,
       cast: cast.map((c) => ({
         id: c._id,
         profile: {

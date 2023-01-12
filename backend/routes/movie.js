@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-  uploadTrailer,
+  //uploadTrailer,
   createMovie,
   updateMovieWithoutPoster,
   updateMovie,
@@ -19,18 +19,18 @@ const { uploadVideo, uploadImage } = require("../middlewares/multer");
 const {
   validateMovie,
   validate,
-  validateTrailer,
+  //validateTrailer,
 } = require("../middlewares/validator");
 const { parseData } = require("../utils/helper");
 const router = express.Router();
 
-router.post(
-  "/upload-trailer",
-  isAuth,
-  isAdmin,
-  uploadVideo.single("video"),
-  uploadTrailer
-);
+// router.post(
+//   "/upload-trailer",
+//   isAuth,
+//   isAdmin,
+//   uploadVideo.single("video"),
+//   uploadTrailer
+// );
 router.post(
   "/create",
   isAuth,
@@ -38,7 +38,7 @@ router.post(
   uploadImage.single("poster"),
   parseData,
   validateMovie,
-  validateTrailer,
+  //validateTrailer,
   validate,
   createMovie
 );

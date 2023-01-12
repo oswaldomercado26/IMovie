@@ -58,12 +58,12 @@ const movieSchema = mongoose.Schema(
       public_id: { type: String, required: true },
       responsive: [URL],
     },
-    trailer: {
-      type: Object,
-      url: { type: String, required: true },
-      public_id: { type: String, required: false },
-      required: false,
-    },
+    // trailer: {
+    //   type: Object,
+    //   url: { type: String, required: true },
+    //   public_id: { type: String, required: false },
+    //   required: false,
+    // },
     reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review" }],
     language: {
       type: String,

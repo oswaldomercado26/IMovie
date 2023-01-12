@@ -36,7 +36,7 @@ export default function UpdateMovie({ movieId, visible, onSuccess }) {
       {ready ? (
         <MovieForm
           initialState={selectedMovie}
-          btnTitle="Update"
+          btnTitle="Actualizado"
           onSubmit={!busy ? handleSubmit : null}
           busy={busy}
         />

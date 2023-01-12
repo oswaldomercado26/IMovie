@@ -234,7 +234,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
             <TagsInput value={tags} name="tags" onChange={updateTags} />
           </div>
 
-          <DirectorSelector onSelect={updateDirector} />
+          {/* <DirectorSelector onSelect={updateDirector} />
 
           <div className="">
             <div className="flex justify-between">
@@ -261,7 +261,7 @@ export default function MovieForm({ busy, btnTitle, initialState, onSubmit }) {
               </ViewAllBtn>
             </div>
             <CastForm onSubmit={updateCast} />
-          </div>
+          </div> */}
 
           <input
             type="Fecha"
