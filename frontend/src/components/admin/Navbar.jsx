@@ -3,12 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiMoviePlay } from "react-icons/bi";
 import { FaUserNinja } from "react-icons/fa";
+import {FaPlayCircle } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { useAuth } from "../../hooks";
 
 export default function Navbar() {
   const { handleLogout } = useAuth();
   return (
+    //crear display flex para el tamaño y posicion del NAVBar
     <nav className="w-48 min-h-screen bg-secondary border-r border-gray-300">
       <div className="flex flex-col justify-between pl-5 h-screen sticky top-0">
         <ul>
@@ -31,8 +33,14 @@ export default function Navbar() {
           </li>
           <li>
             <NavItem to="/actors">
-              <FaUserNinja />
+              <FaUserNinja/>
               <span>Actors</span>
+            </NavItem>
+          </li>
+          <li>
+            <NavItem to="/actors">
+              <FaPlayCircle />
+              <span>Plataformas</span>
             </NavItem>
           </li>
         </ul>
@@ -50,7 +58,7 @@ export default function Navbar() {
     </nav>
   );
 }
-
+//sirve para hacer los cambios de color
 const NavItem = ({ children, to }) => {
   const commonClasses =
     " flex items-center text-lg space-x-2 p-2 hover:opacity-80";
