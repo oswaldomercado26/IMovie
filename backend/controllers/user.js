@@ -32,7 +32,7 @@ exports.create = async (req, res) => {
   var transport = generateMailTransporter();
 
   transport.sendMail({
-    from: "verification@reviewapp.com",
+    from: "verification@istreaming.com",
     to: newUser.email,
     subject: "Email Verification",
     html: `
@@ -74,7 +74,7 @@ exports.verifyEmail = async (req, res) => {
   var transport = generateMailTransporter();
 
   transport.sendMail({
-    from: "verification@reviewapp.com",
+    from: "verification@istreaming.com",
     to: user.email,
     subject: "Welcome Email",
     html: "<h1>Welcome to our app and thanks for choosing us.</h1>",
@@ -128,7 +128,7 @@ exports.resendEmailVerificationToken = async (req, res) => {
   var transport = generateMailTransporter();
 
   transport.sendMail({
-    from: "verification@reviewapp.com",
+    from: "verification@istreaming.com",
     to: user.email,
     subject: "Email Verification",
     html: `
@@ -169,7 +169,7 @@ exports.forgetPassword = async (req, res) => {
   const transport = generateMailTransporter();
 
   transport.sendMail({
-    from: "security@reviewapp.com",
+    from: "security@istreaming.com",
     to: user.email,
     subject: "Reset Password Link",
     html: `
@@ -204,7 +204,7 @@ exports.resetPassword = async (req, res) => {
   const transport = generateMailTransporter();
 
   transport.sendMail({
-    from: "security@reviewapp.com",
+    from: "security@istreaming.com",
     to: user.email,
     subject: "Password Reset Successfully",
     html: `
