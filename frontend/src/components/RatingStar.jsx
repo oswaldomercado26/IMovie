@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 export default function RatingStar({ rating }) {
   if (!rating)
     return (
-      <p className="text-highlight dark:text-highlight-dark">No reviews</p>
+      <p className="text-highlight dark:text-highlight-dark">NO REVIEWS</p>
     );
 
   return (
