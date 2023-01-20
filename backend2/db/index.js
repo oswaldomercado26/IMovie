@@ -1,4 +1,6 @@
+//instalar dependencia de mysql
 var mysql = require('mysql');
+//crear conexion a mysql
 var conexion= mysql.createConnection({
     host : 'localhost',
     database : 'imovie',
