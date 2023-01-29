@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-grid-carousel'
-
+//crear carrusel de plataformas
 const Platform = () => {
   return (
     <Carousel cols={2} rows={1} gap={10} loop>
