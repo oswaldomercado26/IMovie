@@ -147,7 +147,7 @@ const ReviewList = () => {
             </Box>
           ))}
           {filteredReviews.length < reviews.length && (
-            <Button onClick={onLoadMore}>load more</Button>
+            <Button onClick={onLoadMore}>Mostras mas</Button>
           )}
         </Stack>
       </Container>
