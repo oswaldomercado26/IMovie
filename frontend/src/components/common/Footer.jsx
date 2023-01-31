@@ -16,7 +16,6 @@ const Footer = () => {
         >
           <Logo />
           <Box>
-           CUCEI Proyecto Modular
 
           CUCEI PROYECTO MODULAR
           </Box>

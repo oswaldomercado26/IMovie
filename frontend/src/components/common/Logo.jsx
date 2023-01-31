@@ -7,7 +7,6 @@ const Logo = () => {
   return (
     //typography es para darle formato a las letras
     <Typography fontWeight="700" fontSize="1.7rem">
-      I <AiTwotoneHeart /><span style={{ color: theme.palette.success.main }}>Streaming</span>
       I <AiTwotoneHeart /><span style={{ color: theme.palette.success.light}}>Streaming</span>
     </Typography>
   );

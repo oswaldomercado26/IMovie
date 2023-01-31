@@ -148,6 +148,16 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                       />
                     ))}
                     {/* genres */}
+                    {/* platform */}
+                    {[...movie.genre_ids].splice(1, 1).map((genreId, index) => (
+                      <Chip
+                        variant="filled"
+                        color="primary"
+                        key={index}
+                        label= "Netflix"
+                      />
+                    ))}
+                    {/* platform */}
                   </Stack>
 
                   {/* overview */}
@@ -167,7 +177,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                     to={routesGen.mediaDetail(mediaType, movie.id)}
                     sx={{ width: "max-content" }}
                   >
-                    watch now
+                    Ver Mas
                   </Button>
                   {/* buttons */}
                 </Stack>

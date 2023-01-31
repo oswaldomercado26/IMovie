@@ -107,7 +107,7 @@ const MediaReview = ({ reviews, media, mediaType }) => {
 
     if (err) toast.error(err.message);
     if (response) {
-      toast.success("Post review success");
+      toast.success("Post review con exito");
 
       setFilteredReviews([...filteredReviews, response]);
       setReviewCount(reviewCount + 1);

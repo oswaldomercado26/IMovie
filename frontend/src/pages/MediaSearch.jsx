@@ -5,23 +5,22 @@ import { toast } from "react-toastify";
 import mediaApi from "../api/modules/media.api";
 import MediaGrid from "../components/common/MediaGrid";
 import uiConfigs from "../configs/ui.configs";
-//crear ventana de buscador
-const mediaTypes = ["Peliculas", "Series", "Actores"];
+
+const mediaTypes = ["movie", "tv", "people"];
 let timer;
 const timeout = 500;
 
 const MediaSearch = () => {
-  //crar arreglos para la ventana de busqueda
   const [query, setQuery] = useState("");
   const [onSearch, setOnSearch] = useState(false);
   const [mediaType, setMediaType] = useState(mediaTypes[0]);
   const [medias, setMedias] = useState([]);
   const [page, setPage] = useState(1);
-//hacer llamada de y sincronizar los datos para la busqueda
+
   const search = useCallback(
     async () => {
       setOnSearch(true);
-//ver si encuentra algun dato
+
       const { response, err } = await mediaApi.search({
         mediaType,
         query,
@@ -89,7 +88,7 @@ const MediaSearch = () => {
           </Stack>
           <TextField
             color="success"
-            placeholder="Buscar I Streaming"
+            placeholder="Buscar en IStreaming"
             sx={{ width: "100%" }}
             autoFocus
             onChange={onQueryChange}

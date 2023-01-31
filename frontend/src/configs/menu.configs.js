@@ -5,6 +5,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
 import LockResetOutlinedIcon from "@mui/icons-material/LockResetOutlined";
+import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 
 const main = [
   {
@@ -45,6 +46,12 @@ const user = [
     path: "/reviews",
     icon: <RateReviewOutlinedIcon />,
     state: "reviews"
+  },
+  {
+    display: "Alta peliculas",
+    path: "/",
+    icon: <LocalMoviesIcon />,
+    state: "addMovie"
   },
   {
     display: "Actualizar contraseña",
