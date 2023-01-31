@@ -1,7 +1,8 @@
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import { LoadingButton } from "@mui/lab";
 import { Box, Button, Chip, Divider, Stack, Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
@@ -196,6 +197,19 @@ const MediaDetail = () => {
                       }}
                       size="large"
                       startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderOutlinedIcon />}
+                      loadingPosition="start"
+                      loading={onRequest}
+                      onClick={onFavoriteClick}
+                    />
+                                        <LoadingButton
+                      variant="text"
+                      sx={{
+                        width: "max-content",
+                        "& .MuiButon-starIcon": { marginRight: "0" }
+                      }}
+                      size="large"
+                      startIcon={isFavorite ? <ThumbDownIcon /> : <ThumbDownOffAltIcon />}
+                      
                       loadingPosition="start"
                       loading={onRequest}
                       onClick={onFavoriteClick}
