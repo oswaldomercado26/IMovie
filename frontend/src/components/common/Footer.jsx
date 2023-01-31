@@ -1,9 +1,8 @@
-import { Paper, Stack, Button, Box } from '@mui/material';
+import { Paper, Stack,  Box } from '@mui/material';
 import React from 'react';
 import Container from './Container';
 import Logo from './Logo';
-import menuConfigs from "../../configs/menu.configs";
-import { Link } from "react-router-dom";
+
 //crear el footer con las opciones de principales
 const Footer = () => {
   return (
@@ -18,6 +17,8 @@ const Footer = () => {
           <Logo />
           <Box>
            CUCEI Proyecto Modular
+
+          CUCEI PROYECTO MODULAR
           </Box>
         </Stack>
       </Paper>
