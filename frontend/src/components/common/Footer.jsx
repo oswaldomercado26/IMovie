@@ -17,16 +17,7 @@ const Footer = () => {
         >
           <Logo />
           <Box>
-            {menuConfigs.main.map((item, index) => (
-              <Button
-                key={index}
-                sx={{ color: "inherit" }}
-                component={Link}
-                to={item.path}
-              >
-                {item.display}
-              </Button>
-            ))}
+           CUCEI Proyecto Modular
           </Box>
         </Stack>
       </Paper>

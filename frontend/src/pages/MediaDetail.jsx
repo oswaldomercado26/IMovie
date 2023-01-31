@@ -144,7 +144,7 @@ const MediaDetail = () => {
               {/* media info */}
               <Box sx={{
                 width: { xs: "100%", md: "60%" },
-                color: "text.primary"
+                color: "text.secondary"
               }}>
                 <Stack spacing={5}>
                   {/* title */}
@@ -207,7 +207,7 @@ const MediaDetail = () => {
                       startIcon={<PlayArrowIcon />}
                       onClick={() => videoRef.current.scrollIntoView()}
                     >
-                      watch now
+                      Ver tutorial
                     </Button>
                   </Stack>
                   {/* buttons */}
@@ -253,7 +253,7 @@ const MediaDetail = () => {
           {/* media reviews */}
 
           {/* media recommendation */}
-          <Container header="you may also like">
+          <Container header="tambien te puede gustar">
             {media.recommend.length > 0 && (
               <RecommendSlide medias={media.recommend} mediaType={mediaType} />
             )}
