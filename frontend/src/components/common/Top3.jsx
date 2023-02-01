@@ -1,392 +1,60 @@
-import React from 'react';
-import { CContainer,CRow,CCol,CCard,CCardImage,CCardBody,CCardTitle,CCardText } from '@coreui/bootstrap-react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import netflix from '../images/netflix.png';
-import Container from "./Container";
-
-
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Disney from "../images/disney.jpg";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import netflix from "../images/netflix.jpg";
+import paramount from "../images/paramount.jpg";
+import primevideo from "../images/prime.jpg";
+import hbo from "../images/hbo.png";
+//crear carrusel de plataformas https://react-bootstrap.github.io/components/cards/
 const Top3 = () => {
-  <CContainer>
-    <Container header="NETFLIX">
-    <CRow>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-    </CRow>
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
-    <Container header="HBO">
-    <CRow>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-    </CRow>
-    </Container>
-    <Container header="DISNEY">
-    <CRow>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-    </CRow>
-    </Container>
-    <Container header="PRIME VIDEO">
-    <CRow>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-    </CRow>
-    </Container>
-    <Container header="PARAMOUNT+">
-    <CRow>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-      <CCol>
-        <CCard className="mb-3" style={{ maxWidth: "540px" }}>
-          <CRow className="g-0">
-            <CCol md={4}>
-              <CCardImage src={netflix} />
-            </CCol>
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Card title</CCardTitle>
-                <CCardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CCardText>
-                <CCardText>
-                  <small className="text-medium-emphasis">
-                    Last updated 3 mins ago
-                  </small>
-                </CCardText>
-              </CCardBody>
-            </CCol>
-          </CRow>
-        </CCard>
-      </CCol>
-    </CRow>
-    </Container>
-  </CContainer>;
+  );
 };
 export default Top3;
