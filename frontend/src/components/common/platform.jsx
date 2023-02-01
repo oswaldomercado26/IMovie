@@ -1,28 +1,28 @@
 import React from 'react'
 import Carousel from 'react-grid-carousel'
-import Disney from '../images/disney.png'
-import netflix from '../images/netflix.png'
-import paramount from '../images/paramount.png'
-import primevideo from '../images/primevideo.png'
-import hbo from '../images/hbo.jpg'
+import Disney from '../images/disney.jpg'
+import netflix from '../images/netflix.jpg'
+import paramount from '../images/paramount.jpg'
+import primevideo from '../images/prime.jpg'
+import hbo from '../images/hbo.png'
 //crear carrusel de plataformas
 const Platform = () => {
   return (
-    <Carousel cols={5} rows={1} gap={10} loop>
+    <Carousel cols={3} rows={1} gap={6} loop>
       <Carousel.Item>
-        <img width="100%" src={Disney} />
+       <img width="100%" src={primevideo} />
       </Carousel.Item>
       <Carousel.Item>
         <img width="100%" src={netflix} />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="65%" src={paramount} />
+        <img width="100%" src={paramount} />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="100%" src={primevideo} />
+         <img width="100%" src={Disney} />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="100%" src={hbo} />
+        <img width="85%" src={hbo} />
       </Carousel.Item>
       <Carousel.Item>
         {/* anything you want to show in the grid */}
