@@ -7,6 +7,9 @@ import MediaSearch from "../pages/MediaSearch";
 import PasswordUpdate from "../pages/PasswordUpdate";
 import ReviewList from "../pages/ReviewList";
 import ProtectedPage from "../components/common/ProtectedPage";
+import AddStreming from "../components/common/AddStreaming";
+import AddStreaming from "../components/common/AddStreaming";
+
 //crear rutas de vistas
 export const routesGen = {
   home: "/",
@@ -16,7 +19,8 @@ export const routesGen = {
   person: (id) => `/person/${id}`,
   favoriteList: "/favorites",
   reviewList: "/reviews",
-  passwordUpdate: "password-update"
+  passwordUpdate: "password-update",
+  addStreaming: "/add-streaming"
 };
 
 const routes = [
@@ -69,6 +73,15 @@ const routes = [
   {
     path: "/:mediaType/:mediaId",
     element: <MediaDetail />
+  },
+  {
+    path: "/add-streaming",
+    element: (
+      <ProtectedPage>
+        <addStreaming />
+      </ProtectedPage>
+    ),
+    state: "addStreaming"
   }
 ];
 

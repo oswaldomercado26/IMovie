@@ -9,60 +9,13 @@ import netflix from "../images/netflix.jpg";
 import paramount from "../images/paramount.jpg";
 import primevideo from "../images/prime.jpg";
 import hbo from "../images/hbo.png";
+import Table from "react-bootstrap/Table"
+import Carousel from 'react-grid-carousel'
 //crear carrusel de plataformas https://react-bootstrap.github.io/components/cards/
 const Top3 = () => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" width="70%" src={Disney} />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Ver mas</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" width="70%" src={Disney} />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Ver mas</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" width="70%" src={Disney} />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Ver mas</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
-export default Top3;
-
-
-
-  <Container>
-          <Table striped bordered hover variant="dark">
+        <Container>
+      <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>#</th>
@@ -76,21 +29,231 @@ export default Top3;
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>
+            <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+            <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
+          <td>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" width="70%" src={Disney} />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Ver mas</Button>
+            </Card.Body>
+          </Card>
+
+          </td>
         </tr>
       </tbody>
     </Table>
     </Container>
+ 
+  );
+};
+export default Top3;
+
+
+
+

@@ -48,8 +48,8 @@ const user = [
     state: "reviews"
   },
   {
-    display: "Alta peliculas",
-    path: "/",
+    display: "Alta Streaming",
+    path: "/add-streaming",
     icon: <LocalMoviesIcon />,
     state: "addMovie"
   },
