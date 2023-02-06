@@ -95,6 +95,7 @@ const MediaDetail = () => {
       toast.success("Añadir a favorito con exito");
     }
   };
+
 //remover nuestro favorito 
   const onRemoveFavorite = async () => {
     if (onRequest) return;
@@ -113,6 +114,57 @@ const MediaDetail = () => {
       toast.success("Removido con exito");
     }
   };
+//crear favorito media 
+const onUnFavoriteClick = async () => {
+  if (!user) return dispatch(setAuthModalOpen(true));
+
+  if (onRequest) return;
+
+  if (isFavorite) {
+    onRemoveFavorite();
+    return;
+  }
+
+  setOnRequest(true);
+
+  const body = {
+    mediaId: media.id,
+    mediaTitle: media.title || media.name,
+    mediaType: mediaType,
+    mediaPoster: media.poster_path,
+    mediaRate: media.vote_average
+  };
+
+  const { response, err } = await favoriteApi.add(body);
+
+  setOnRequest(false);
+
+  if (err) toast.error(err.message);
+  if (response) {
+    dispatch(addFavorite(response));
+    setIsFavorite(true);
+    toast.success("Añadir a favorito con exito");
+  }
+};
+
+//remover nuestro favorito 
+const onRemoveUnFavorite = async () => {
+  if (onRequest) return;
+  setOnRequest(true);
+
+  const favorite = listFavorites.find(e => e.mediaId.toString() === media.id.toString());
+
+  const { response, err } = await favoriteApi.remove({ favoriteId: favorite.id });
+
+  setOnRequest(false);
+
+  if (err) toast.error(err.message);
+  if (response) {
+    dispatch(removeFavorite(favorite));
+    setIsFavorite(false);
+    toast.success("Removido con exito");
+  }
+};
 
   return (
     media ? (
@@ -212,7 +264,7 @@ const MediaDetail = () => {
                       
                       loadingPosition="start"
                       loading={onRequest}
-                      onClick={onFavoriteClick}
+                      onClick={onUnFavoriteClick}
                     />
                     <Button
                       variant="contained"

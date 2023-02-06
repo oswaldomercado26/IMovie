@@ -8,7 +8,7 @@ import hbo from '../images/hbo.jpg'
 //crear carrusel de plataformas
 const Platform = () => {
   return (
-    <Carousel cols={5} rows={1} gap={10} loop>
+    <Carousel cols={3} rows={1} gap={5} loop>
       <Carousel.Item>
         <img width="100%" src={Disney} />
       </Carousel.Item>
