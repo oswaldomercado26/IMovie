@@ -9,8 +9,8 @@ export const themeModes = {
 const themeConfigs = {
   custom: ({ mode }) => {
     const customPalette = mode === themeModes.dark ? {
-      primary: {
-        main: "#66FFFF",
+      primary: { // modo oscuro
+        main: "#0AC79B",
         contrastText: "#ffffff"
       },
       secondary: {
@@ -22,8 +22,8 @@ const themeConfigs = {
         paper: "#131313"
       }
     } : {
-      primary: {
-        main: "#ff0000"
+      primary: { // Color modo dia
+        main: "#0AC79B"
       },
       secondary: {
         main: "#20603d"
