@@ -40,6 +40,7 @@ const MediaDetail = () => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [onRequest, setOnRequest] = useState(false);
   const [genres, setGenres] = useState([]);
+  const [platform, setPlatform] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -56,6 +57,12 @@ const MediaDetail = () => {
         setMedia(response);
         setIsFavorite(response.isFavorite);
         setGenres(response.genres.splice(0, 2));
+      }
+
+      if (response) {
+        setMedia(response);
+        setIsFavorite(response.isFavorite);
+        setPlatform(response.platform.splice(0, 1));
       }
 
       if (err) toast.error(err.message);
@@ -175,6 +182,16 @@ const MediaDetail = () => {
                       />
                     ))}
                     {/* genres */}
+                    {/* platform */}
+                    {genres.map((genre, index) => (
+                      <Chip
+                        label="Netflix"
+                        variant="filled"
+                        color="primary"
+                        key={index}
+                      />
+                    ))}
+                    {/* platform */}
                   </Stack>
                   {/* rate and genres */}
 
