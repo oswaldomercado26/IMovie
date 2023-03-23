@@ -1,0 +1,262 @@
+.home {
+  margin-bottom: 0;
+
+  &__content {
+    display: flex;
+    height: 78vh;
+  }
+
+  // SEARCH & FILTER CONTROLS
+  &__controls-wrapper {
+    margin: 2rem 0 0 2rem;
+    position: relative;
+    transition: all .3s linear;
+    height: 77vh;
+  }
+
+  &__expand-controls {
+    position: absolute;
+    top: -1rem;
+    right: -5.5rem;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    color: $theme-grey;
+    
+    p span {
+      font-size: 3.5rem;
+    }
+    
+    &:hover {
+      color: $theme-blue-light;
+      cursor: pointer;
+    }
+
+    &--expand {
+      animation: fadeIn 4s;
+    }
+  }
+
+  &__controls {
+    transform: translateX(0);
+    opacity: 1;
+    width: 100%;
+    transition: all .5s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__collapse-controls {
+    opacity: 1;
+    width: 0;
+    visibility: hidden;
+    transform: translateX(-10rem);
+    transition: all .5s linear;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+
+  &__search-bar {
+    font-family: inherit;
+    padding: 1rem 1.5rem;
+    width: 29rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  &__controls-heading {
+    margin-top: 2rem;
+    text-align: center;
+    color: $theme-grey;
+    padding: .5rem 1rem;
+  }
+
+  &__clear-filter {
+    font-family: inherit;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: $theme-blue-light;
+    transition: transform .2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      font-weight: 600;
+    }
+
+    &:active {
+      transform: scale(.98);
+    }
+  }
+
+  &__filters {
+    max-width: 29rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  
+  &__filter {
+    border: 2px solid $theme-midnight-blue;
+    margin: .5rem;
+    width: 11.5rem;
+    text-align: center;
+    padding: .75rem 0;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    color: $theme-grey;
+
+    &:hover {
+      font-weight: 600;
+      border: 2px solid $theme-white;
+      cursor: pointer;
+    }
+
+    &:active,
+    &--selected {
+      background-color: $theme-midnight-blue;
+      color: $theme-white;
+      font-weight: 600;
+    }
+
+  }
+
+  // SERIES CARDS
+  &__catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+    height: 99%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: rgba($theme-grey, .6);
+    }
+  }
+
+  &__empty-catalogue {
+    margin: 7rem 5rem;
+    align-self: stretch;
+  }
+
+  &__series-card {
+    box-shadow: .1rem 0 1.7rem 1.2rem rgba($theme-midnight-blue, 0.9);
+    border-radius: 2.5rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 3rem;
+    margin: 3rem 3.5rem;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  &__series-poster {
+    height: 25rem;
+    margin: 2rem 0;
+    border-radius: .2rem;
+  }
+
+  &__series-link {
+    color: $theme-white;
+    text-decoration: none;
+
+    h2 {
+      font-weight: 600;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .home {
+
+    &__content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: unset;
+    }
+
+    &__expand-controls {
+      margin-top: 2rem;
+      top: -5rem;
+      left: 10%;
+      writing-mode: horizontal-tb;
+      letter-spacing: .75rem;
+
+      p span {
+        font-size: 3rem;
+      }
+    }
+
+    &__controls-wrapper {
+      margin: 2rem 0 0 0;
+      height: unset;
+    }
+
+    &__controls {
+      padding-top: 2rem;
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &__collapse-controls {
+      width: 100%;
+      height: 0;
+      opacity: 0;
+      transform: translate(0, -10rem);
+    }
+
+    &__catalogue {
+      margin: 1.5rem;
+    }
+
+    &__series-poster {
+      height: 20rem;
+      margin: 2rem 0;
+      border-radius: .2rem;
+    }
+
+    &__heading {
+      line-height: 5rem;
+      margin-top: 0;
+      font-size: 2.75rem;
+      text-align: center;
+    }
+
+    &__subheading {
+      font-size: 2.2rem;
+    }
+  }
+}
