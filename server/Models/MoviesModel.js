@@ -64,14 +64,14 @@ const moviesSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
-    platform: {
-      type: String,
-      required: true,
-    },
     numberOfReviews: {
       type: Number,
       required: true,
       default: 0,
+    },
+    platform: {
+      type: String,
+      required: true,
     },
     reviews: [reviewSchema],
     casts: [

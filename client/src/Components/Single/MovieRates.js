@@ -35,7 +35,7 @@ const Ratings = [
     value: 4,
   },
   {
-    title: "5 - Obra maestra",
+    title: "5 - Obra Maestra",
     value: 5,
   },
 ];
@@ -86,7 +86,7 @@ function MovieRates({ movie }) {
             Review "{movie?.name}"
           </h3>
           <p className="text-sm leading-7 font-medium text-border">
-            Escriba una reseña para compartir con las personas
+            Escribe una review sobre la pelicula y calificala
           </p>
           <div className="text-sm w-full">
             <Select

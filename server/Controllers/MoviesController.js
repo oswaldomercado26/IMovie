@@ -22,14 +22,13 @@ const importMovies = asyncHandler(async (req, res) => {
 const getMovies = asyncHandler(async (req, res) => {
   try {
     // filter movies by category, time, language, rate, year and search
-    const { category, time, language, rate, year, search,  platform} = req.query;
+    const { category, time, language, rate, year, search } = req.query;
     let query = {
       ...(category && { category }),
       ...(time && { time }),
       ...(language && { language }),
       ...(rate && { rate }),
       ...(year && { year }),
-      ...(platform && { platform}),
       ...(search && { name: { $regex: search, $options: "i" } }),
     };
 
@@ -188,7 +187,6 @@ const updateMovie = asyncHandler(async (req, res) => {
       year,
       video,
       platform,
-      
       casts,
     } = req.body;
 
@@ -207,8 +205,8 @@ const updateMovie = asyncHandler(async (req, res) => {
       movie.time = time || movie.time;
       movie.language = language || movie.language;
       movie.year = year || movie.year;
-      movie.platform = platform || movie.platform;
       movie.video = video || movie.video;
+      movie.platform= platform || movie.platform;
       movie.casts = casts || movie.casts;
 
       // save the movie in database
@@ -297,8 +295,8 @@ const createMovie = asyncHandler(async (req, res) => {
       time,
       language,
       year,
-      platform,
       video,
+      platform,
       casts,
       userId: req.user._id,
     });

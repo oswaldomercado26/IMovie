@@ -73,7 +73,7 @@ function Profile() {
           <div className="col-span-2">
             <Imagepreview
               image={imageUrl}
-              name={userInfo ? userInfo.fullName : "I love Streaming"}
+              name={userInfo ? userInfo.fullName : "I Love Streaming"}
             />
           </div>
         </div>
@@ -81,7 +81,7 @@ function Profile() {
         <div className="w-full">
           <Input
             label="FullName"
-            placeholder="I love Streaming"
+            placeholder="I Love Streaming"
             type="text"
             bg={true}
             name="fullName"
@@ -92,7 +92,7 @@ function Profile() {
         <div className="w-full">
           <Input
             label="Email"
-            placeholder="IloveStreaming@gmail.com"
+            placeholder="ilovestreaming@gmail.com"
             type="email"
             name="email"
             register={register("email")}

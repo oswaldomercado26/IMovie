@@ -1,5 +1,3 @@
-//Botones de navegación
-
 import Drawer from "rc-drawer";
 import React from "react";
 

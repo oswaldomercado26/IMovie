@@ -84,7 +84,6 @@ function EditMovie() {
       setValue("year", movie?.year);
       setValue("category", movie?.category);
       setValue("desc", movie?.desc);
-      setValue("platform",movie?.platform)
       setImageWithoutTitle(movie?.image);
       setImageTitle(movie?.titleImage);
       setVideoUrl(movie?.video);
@@ -156,22 +155,6 @@ function EditMovie() {
               />
               {errors.time && <InlineError text={errors.time.message} />}
             </div>
-          </div>
-          <div className="w-full grid md:grid-cols-2 gap-6">
-            <div className="w-full">
-              <Input
-                label="platform"
-                placeholder="Netflix"
-                type="text"
-                bg={true}
-                name="platform"
-                register={register("platform")}
-              />
-              {errors.platform && (
-                <InlineError text={errors.platform.message} />
-              )}
-            </div>
- 
           </div>
 
           <div className="w-full grid md:grid-cols-2 gap-6">

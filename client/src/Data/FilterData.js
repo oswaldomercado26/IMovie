@@ -1,13 +1,33 @@
 export const LanguageData = [
   { title: "Sort By Language" },
-  { title: "Ingles" },
-  { title: "Francia" },
-  { title: "Alemania" },
-  { title: "Español" },
-  { title: "Italiano" },
-  { title: "Russo" },
-  { title: "Chino" },
-  { title: "Japones" },
+  { title: "English" },
+  { title: "Arabic" },
+  { title: "French" },
+  { title: "German" },
+  { title: "Spanish" },
+  { title: "Italian" },
+  { title: "Russian" },
+  { title: "Chinese" },
+  { title: "Japanese" },
+  { title: "Korean" },
+  { title: "Hindi" },
+  { title: "Urdu" },
+  { title: "Turkish" },
+  { title: "Portuguese" },
+  { title: "Dutch" },
+  { title: "Swedish" },
+  { title: "Danish" },
+  { title: "Norwegian" },
+  { title: "Finnish" },
+  { title: "Indonesian" },
+  { title: "Malay" },
+  { title: "Thai" },
+  { title: "Vietnamese" },
+  { title: "Hebrew" },
+  { title: "Greek" },
+  { title: "Polish" },
+  { title: "Romanian" },
+  { title: "Swahili" },
 ];
 
 export const RatesData = [
@@ -18,14 +38,7 @@ export const RatesData = [
   { title: "4 Star" },
   { title: "5 Star" },
 ];
-export const PlatformData = [
-  { title: "Sort By Platform" },
-  { title: "Netflix" },
-  { title: "HBO" },
-  { title: "Disney" },
-  { title: "Prime Video" },
-  { title: "Paramount" },
-];
+
 export const TimesData = [
   { title: "Sort By Hours" },
   { title: "1 Hours" },

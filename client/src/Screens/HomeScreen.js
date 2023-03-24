@@ -3,7 +3,6 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import Banner from "../Components/Home/Banner";
 import PopularMovies from "../Components/Home/PopularMovies";
-
 import TopRated from "../Components/Home/TopRated";
 import Layout from "../Layout/Layout";
 import Platform from "../Components/Home/platform";
@@ -48,8 +47,9 @@ function HomeScreen() {
     <Layout>
       <div className="container mx-auto min-h-screen px-2 mb-6">
         <Banner movies={movies} isLoading={isLoading} />
-         <Platform />
+        <Platform />
         <PopularMovies movies={randomMovies} isLoading={randomLoading} />
+       
         <TopRated movies={topMovies} isLoading={topLoading} />
       </div>
     </Layout>

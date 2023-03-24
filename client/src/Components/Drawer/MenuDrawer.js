@@ -1,5 +1,3 @@
-//Links del TopBar
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import MainDrawer from "./MainDrawer";
@@ -24,7 +22,7 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
       icon: BsCollectionPlay,
     },
     {
-      name: "Recomendaciones",
+      name: "About Us",
       link: "/about-us",
       icon: HiOutlineUserGroup,
     },

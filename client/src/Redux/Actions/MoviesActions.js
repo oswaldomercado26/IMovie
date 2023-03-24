@@ -11,7 +11,6 @@ export const getAllMoviesAction =
     language = "",
     rate = "",
     year = "",
-    platform= "",
     search = "",
     pageNumber = "",
   }) =>
@@ -24,7 +23,6 @@ export const getAllMoviesAction =
         language,
         rate,
         year,
-        platform,
         search,
         pageNumber
       );

@@ -57,7 +57,7 @@ function ShareMovieModal({ modalOpen, setModalOpen, movie }) {
             <data.shareButton
               key={index}
               url={url}
-              quote="I Love Streaming"
+              quote="I love Streaming"
             >
               <div className="w-12 transitions hover:bg-subMain flex-colo text-lg h-12 bg-white rounded bg-opacity-30">
                 <data.icon />

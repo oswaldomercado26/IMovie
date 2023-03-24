@@ -3,8 +3,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import Head from '../Components/Head';
 import Layout from './../Layout/Layout';
-
-import HBO from '../Components/Recommended/HBO';
+import General from '../Components/Recomendaciones/General';
 
 import {
 
@@ -43,7 +42,7 @@ function AboutUs() {
 
         </div>
    
-        <HBO movies={topMovies} isLoading={topLoading} />
+        <General movies={topMovies} isLoading={topLoading} />
 
       </div>
     </Layout>

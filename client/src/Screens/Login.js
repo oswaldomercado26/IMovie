@@ -64,7 +64,7 @@ function Login() {
           <div className="w-full">
             <Input
               label="Email"
-              placeholder="IloveStreaming@gmail.com"
+              placeholder="iloveStreaming@gmail.com"
               type="email"
               name="email"
               register={register("email")}

@@ -11,7 +11,7 @@ function Footer() {
           link: '/',
         },
         {
-          name: 'About Us',
+          name: 'Recomendaciones',
           link: '/about-us',
         },
         {

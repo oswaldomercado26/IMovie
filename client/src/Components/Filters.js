@@ -6,7 +6,6 @@ import {
   RatesData,
   TimesData,
   YearData,
-
 } from "../Data/FilterData";
 
 function Filters(props) {
@@ -22,7 +21,6 @@ function Filters(props) {
     setTimes,
     rates,
     setRates,
-
   } = props?.data;
 
   const Filter = [
@@ -54,7 +52,6 @@ function Filters(props) {
       onChange: setRates,
       items: RatesData,
     },
-
   ];
 
   return (

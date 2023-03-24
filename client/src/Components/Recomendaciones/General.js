@@ -86,7 +86,7 @@ const SwiperTop = ({ prevEl, nextEl, movies }) => {
   );
 };
 
-function HBO({ movies, isLoading }) {
+function General({ movies, isLoading }) {
   const [nextEl, setNextEl] = useState(null);
   const [prevEl, setPrevtEl] = useState(null);
   const classNames =
@@ -116,4 +116,4 @@ function HBO({ movies, isLoading }) {
   );
 }
 
-export default HBO;
+export default General;

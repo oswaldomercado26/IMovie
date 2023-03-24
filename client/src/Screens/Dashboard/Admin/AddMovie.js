@@ -75,9 +75,9 @@ function AddMovie() {
         name: "",
         time: 0,
         language: "",
-        platform:"",
         year: 0,
         category: "",
+        platform:"",
         desc: "",
       });
       setImageTitle("");
@@ -128,18 +128,18 @@ function AddMovie() {
         </div>
         <div className="w-full grid md:grid-cols-2 gap-6">
          
-          <div className="w-full">
-            <Input
-              label="Platform"
-              placeholder="netflix"
-              type="text"
-              bg={true}
-              name="platform"
-              register={register("platform")}
-            />
-            {errors.platform && <InlineError text={errors.platform.message} />}
-          </div>
-        </div>
+         <div className="w-full">
+           <Input
+             label="Platform"
+             placeholder="netflix"
+             type="text"
+             bg={true}
+             name="platform"
+             register={register("platform")}
+           />
+           {errors.platform && <InlineError text={errors.platform.message} />}
+         </div>
+       </div>
 
         <div className="w-full grid md:grid-cols-2 gap-6">
           <div className="w-full">

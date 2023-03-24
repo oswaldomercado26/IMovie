@@ -78,11 +78,6 @@ function SideBar({ children }) {
           icon: FiSettings,
         },
         {
-          name: "Add Streaming",
-          link: "/addmovie",
-          icon: RiMovie2Fill,
-        },
-        {
           name: "Favorites Movies",
           link: "/favorites",
           icon: FaHeart,
@@ -92,7 +87,6 @@ function SideBar({ children }) {
           link: "/password",
           icon: RiLockPasswordLine,
         },
-
       ]
     : [];
 
