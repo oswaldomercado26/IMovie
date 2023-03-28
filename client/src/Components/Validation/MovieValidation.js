@@ -4,7 +4,7 @@ const ReviewValidation = yup.object().shape({
   comment: yup
     .string()
     .required("Comment is required")
-    .max(150, "Comment should be less than 150 characters"),
+    .max(500, "Comment should be less than 150 characters"),
   rating: yup.number().required("Select a rating"),
 });
 
@@ -12,7 +12,7 @@ const movieValidation = yup.object().shape({
   name: yup
     .string()
     .required("Please enter a movie name")
-    .max(50, "Movie name should be less than 50 characters"),
+    .max(100, "Movie name should be less than 50 characters"),
   time: yup.number().required("Please enter a movie duration"),
   language: yup.string().required("Please enter a movie language"),
   year: yup.number().required("Please enter year of release"),
@@ -20,7 +20,7 @@ const movieValidation = yup.object().shape({
   desc: yup
     .string()
     .required("Please enter a movie description")
-    .max(300, "Movie description should be less than 300 characters"),
+    .max(1000, "Movie description should be less than 300 characters"),
 });
 
 export { ReviewValidation, movieValidation };

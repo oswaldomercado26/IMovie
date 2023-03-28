@@ -89,7 +89,7 @@ function Dashboard() {
           </div>
         ))}
       </div>
-      <h3 className="text-md font-medium my-6 text-border">Recent Movies</h3>
+      <h3 className="text-md font-medium my-6 text-border">Streaming Reciente</h3>
       {isLoading || deleteLoading ? (
         <Loader />
       ) : movies.length > 0 ? (
