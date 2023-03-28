@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPhoneCall, FiMapPin, FiMail } from 'react-icons/fi';
+import {  FiMapPin, FiMail } from 'react-icons/fi';
 import Head from '../Components/Head';
 import Layout from '../Layout/Layout';
 
@@ -7,22 +7,16 @@ function ContactUs() {
   const ContactData = [
     {
       id: 1,
-      title: 'Email Us',
-      info: 'Interactively grow backend ideas for cross-platform models.',
+      title: 'Email',
+      info: 'Interactua con nosotros para nuevas actualizaciones.',
       icon: FiMail,
-      contact: 'info@zpunet.com',
+      contact: 'iloveStreaming@gmail.com',
     },
-    {
-      id: 2,
-      title: 'Call Us',
-      info: 'Distinctively exploit optimal alignments for intuitive bandwidth.',
-      icon: FiPhoneCall,
-      contact: '+255 789 456 123',
-    },
+
     {
       id: 3,
       title: 'Location',
-      info: 'Dar es salaam, Tanzania. 345 Kigamboni, Street No. 12,',
+      info: 'Av Revolucion 1500 ',
       icon: FiMapPin,
       contact: '',
     },

@@ -78,6 +78,11 @@ function SideBar({ children }) {
           icon: FiSettings,
         },
         {
+          name: "Add Movie",
+          link: "/addmovie",
+          icon: RiMovie2Fill,
+        },
+        {
           name: "Favorites Movies",
           link: "/favorites",
           icon: FaHeart,

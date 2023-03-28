@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { BsCollectionPlay } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import { FaFacebook, FaMedium, FaTelegram, FaYoutube } from "react-icons/fa";
+
 
 function MenuDrawer({ drawerOpen, toggleDrawer }) {
   const active = "bg-dry text-subMain";
@@ -22,7 +22,7 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
       icon: BsCollectionPlay,
     },
     {
-      name: "About Us",
+      name: "Recomendaciones",
       link: "/about-us",
       icon: HiOutlineUserGroup,
     },
@@ -33,24 +33,6 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
     },
   ];
 
-  const LinkDatas = [
-    {
-      icon: FaFacebook,
-      link: "https://www.facebook.com/zpunet",
-    },
-    {
-      icon: FaMedium,
-      link: "https://medium.com/@irenemmassyy",
-    },
-    {
-      icon: FaTelegram,
-      link: "https://t.me/zpunet",
-    },
-    {
-      icon: FaYoutube,
-      link: "https://www.youtube.com/channel/UCOYwYO-LEsrjqBs6xXSfq1w",
-    },
-  ];
 
   return (
     <MainDrawer drawerOpen={drawerOpen} closeDrawer={toggleDrawer}>
@@ -87,19 +69,7 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
               </NavLink>
             ))}
           </div>
-          <div className="flex-rows gap-6 w-full">
-            {LinkDatas.map((link, index) => (
-              <a
-                href={link.link}
-                key={index}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-colo w-12 h-12 transitions hover:bg-subMain text-lg bg-white rounded bg-opacity-30"
-              >
-                <link.icon />
-              </a>
-            ))}
-          </div>
+
         </div>
       </div>
     </MainDrawer>
