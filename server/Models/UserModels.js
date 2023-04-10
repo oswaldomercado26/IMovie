@@ -30,6 +30,12 @@ const UserSchema = mongoose.Schema(
         ref: "Movies",
       },
     ],
+    unlikedMovies: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Movies",
+      },
+    ],
   },
   {
     timestamps: true,

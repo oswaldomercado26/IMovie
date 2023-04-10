@@ -40,6 +40,7 @@ const Swipper = ({ sameClass, movies }) => {
             <h1 className="xl:text-4xl truncate capitalize font-sans sm:text-2xl text-xl font-bold">
               {movie?.name}
             </h1>
+
             <div className="flex gap-5 items-center text-dryGray">
               <FlexMovieItems movie={movie} />
             </div>
@@ -48,7 +49,7 @@ const Swipper = ({ sameClass, movies }) => {
                 to={`/movie/${movie?._id}`}
                 className="bg-subMain hover:text-main transitions text-white px-8 py-3 rounded font-medium sm:text-sm text-xs"
               >
-                Watch
+                Ver Mas
               </Link>
               <button
                 onClick={() => LikeMovie(movie, dispatch, userInfo)}

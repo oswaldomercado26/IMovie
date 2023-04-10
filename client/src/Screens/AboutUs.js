@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Head from '../Components/Head';
 import Layout from './../Layout/Layout';
 import General from '../Components/Recomendaciones/General';
+import BadGeneral from '../Components/Recomendaciones/BadGeneral';
 
 import {
 
@@ -43,6 +44,8 @@ function AboutUs() {
         </div>
    
         <General movies={topMovies} isLoading={topLoading} />
+
+        <BadGeneral movies={topMovies} isLoading={topLoading} />
 
       </div>
     </Layout>

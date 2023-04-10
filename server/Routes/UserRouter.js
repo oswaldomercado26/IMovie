@@ -10,6 +10,9 @@ import {
   deleteLikedMovies,
   getUsers,
   deleteUser,
+  getUnLikedMovies,
+  addUnLikedMovie,
+  deleteUnLikedMovies,
 } from "../Controllers/UserController.js";
 import { protect, admin } from "../middlewares/Auth.js";
 
@@ -26,6 +29,9 @@ router.put("/password", protect, changeUserPassword);
 router.get("/favorites", protect, getLikedMovies);
 router.post("/favorites", protect, addLikedMovie);
 router.delete("/favorites", protect, deleteLikedMovies);
+router.get("/Unfavorites", protect, getUnLikedMovies);
+router.post("/Unfavorites", protect, addUnLikedMovie);
+router.delete("/Unfavorites", protect, deleteUnLikedMovies);
 
 // ******** ADMIN ROUTES ********
 router.get("/", protect, admin, getUsers);

@@ -7,7 +7,6 @@ import HBO from "../images/hbo.png"
 import Netflix from "../images/netflix.jpg"
 import Paramount from "../images/paramount.jpg"
 import { Card } from 'semantic-ui-react'
-import 'react-alice-carousel/lib/alice-carousel.css';
 import 'semantic-ui-css/semantic.min.css'
 
 function Platform() {

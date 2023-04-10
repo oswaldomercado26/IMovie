@@ -40,7 +40,7 @@ function SideBar({ children }) {
           icon: FaListAlt,
         },
         {
-          name: "Add Movie",
+          name: "Add Streaming",
           link: "/addmovie",
           icon: RiMovie2Fill,
         },
@@ -73,14 +73,14 @@ function SideBar({ children }) {
     : userInfo
     ? [
         {
+          name: "Add Streaming",
+          link: "/addmovie",
+          icon: RiMovie2Fill,
+        },
+        {
           name: "Update Profile",
           link: "/profile",
           icon: FiSettings,
-        },
-        {
-          name: "Add Movie",
-          link: "/addmovie",
-          icon: RiMovie2Fill,
         },
         {
           name: "Favorites Movies",

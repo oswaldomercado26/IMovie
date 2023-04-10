@@ -35,10 +35,12 @@ const logoutAction = () => (dispatch) => {
   dispatch({ type: userConstants.USER_LOGIN_RESET });
   dispatch({ type: userConstants.USER_REGISTER_RESET });
   dispatch({ type: userConstants.DELETE_FAVORITE_MOVIES_RESET });
+  dispatch({ type: userConstants.DELETE_UNFAVORITE_MOVIES_RESET });
   dispatch({ type: userConstants.USER_UPDATE_PROFILE_RESET });
   dispatch({ type: userConstants.USER_DELETE_PROFILE_RESET });
   dispatch({ type: userConstants.USER_CHANGE_PASSWORD_RESET });
   dispatch({ type: userConstants.GET_FAVORITE_MOVIES_RESET });
+  dispatch({ type: userConstants.GET_UNFAVORITE_MOVIES_RESET });
   dispatch({ type: userConstants.GET_ALL_USERS_RESET });
   dispatch({ type: userConstants.DELETE_USER_RESET });
   dispatch({ type: userConstants.LIKE_MOVIE_RESET });
@@ -104,7 +106,20 @@ const changePasswordAction = (passwords) => async (dispatch, getState) => {
   }
 };
 
-// get all favorite movies action
+// get all unfavorite movies action
+const getUnFavoriteMoviesAction = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: userConstants.GET_UNFAVORITE_MOVIES_REQUEST });
+    const response = await userApi.getFavoriteMovies(tokenProtection(getState));
+    dispatch({
+      type: userConstants.GET_UNFAVORITE_MOVIES_SUCCESS,
+      payload: response,
+    });
+  } catch (error) {
+    ErrorsAction(error, dispatch, userConstants.GET_UNFAVORITE_MOVIES_FAIL);
+  }
+};
+// get all unfavorite movies action
 const getFavoriteMoviesAction = () => async (dispatch, getState) => {
   try {
     dispatch({ type: userConstants.GET_FAVORITE_MOVIES_REQUEST });
@@ -129,6 +144,20 @@ const deleteFavoriteMoviesAction = () => async (dispatch, getState) => {
     toast.success("Favorite Movies Deleted");
   } catch (error) {
     ErrorsAction(error, dispatch, userConstants.DELETE_FAVORITE_MOVIES_FAIL);
+  }
+};
+
+// delete all unfavorite movies action
+const deleteUnFavoriteMoviesAction = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: userConstants.DELETE_UNFAVORITE_MOVIES_REQUEST });
+    await userApi.deleteFavoriteMovies(tokenProtection(getState));
+    dispatch({
+      type: userConstants.DELETE_UNFAVORITE_MOVIES_SUCCESS,
+    });
+    toast.success("Favorite Movies Deleted");
+  } catch (error) {
+    ErrorsAction(error, dispatch, userConstants.DELETE_UNFAVORITE_MOVIES_FAIL);
   }
 };
 
@@ -180,6 +209,24 @@ const likeMovieAction = (movieId) => async (dispatch, getState) => {
     ErrorsAction(error, dispatch, userConstants.LIKE_MOVIE_FAIL);
   }
 };
+// user like movie action
+const UnlikeMovieAction = (movieId) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: userConstants.UNLIKE_MOVIE_REQUEST });
+    const response = await userApi.UnlikeMovieService(
+      movieId,
+      tokenProtection(getState)
+    );
+    dispatch({
+      type: userConstants.UNLIKE_MOVIE_SUCCESS,
+      payload: response,
+    });
+    toast.success("Added to your favorites");
+    dispatch(getUnFavoriteMoviesAction());
+  } catch (error) {
+    ErrorsAction(error, dispatch, userConstants.UNLIKE_MOVIE_FAIL);
+  }
+};
 
 export {
   loginAction,
@@ -193,4 +240,6 @@ export {
   deleteUserAction,
   getAllUsersAction,
   likeMovieAction,
+  UnlikeMovieAction,
+  deleteUnFavoriteMoviesAction
 };

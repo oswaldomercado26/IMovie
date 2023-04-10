@@ -242,6 +242,85 @@ const deleteLikedMovies = asyncHandler(async (req, res) => {
   }
 });
 
+
+// @desc Get all liked movies
+// @route GET /api/users/favorites
+// @access Private
+const getUnLikedMovies = asyncHandler(async (req, res) => {
+  try {
+    // find user in DB
+    const user = await User.findById(req.user._id).populate("unlikedMovies");
+    // if user exists send liked movies to client
+    if (user) {
+      res.json(user.unlikedMovies);
+    }
+    // else send error message
+    else {
+      res.status(404);
+      throw new Error("User not found");
+    }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+// @desc Add movie to liked movies
+// @route POST /api/users/favorites
+// @access Private
+const addUnLikedMovie = asyncHandler(async (req, res) => {
+  const { movieId } = req.body;
+  try {
+    // find user in DB
+    const user = await User.findById(req.user._id);
+    // if user exists add movie to liked movies and save it in DB
+    if (user) {
+      // check if movie already liked
+      // if movie already liked send error message
+      if (user.unlikedMovies.includes(movieId)) {
+        res.status(400);
+        throw new Error("Movie already liked");
+      }
+      // else add movie to liked movies and save it in DB
+      user.unlikedMovies.push(movieId);
+      await user.save();
+      res.json(user.unlikedMovies);
+    }
+    // else send error message
+    else {
+      res.status(404);
+      throw new Error("Movie not found");
+    }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+// @desc Delete all liked movies
+// @route DELETE /api/users/favorites
+// @access Private
+const deleteUnLikedMovies = asyncHandler(async (req, res) => {
+  try {
+    // find user in DB
+    const user = await User.findById(req.user._id);
+    // if user exists delete all liked movies and save it in DB
+    if (user) {
+      user.unlikedMovies = [];
+      await user.save();
+      res.json({ message: "Your favorites movies deleted successfully" });
+    }
+    // else send error message
+    else {
+      res.status(404);
+      throw new Error("User not found");
+    }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+
+
+
 //  ************** ADMIN CONTROLLERS **************
 
 // @desc Get all users
@@ -292,6 +371,9 @@ export {
   deleteUserProfile,
   changeUserPassword,
   getLikedMovies,
+  getUnLikedMovies,
+  addUnLikedMovie,
+  deleteUnLikedMovies,
   addLikedMovie,
   deleteLikedMovies,
   getUsers,

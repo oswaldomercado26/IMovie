@@ -94,6 +94,38 @@ const likeMovieService = async (movieId, token) => {
   return data;
 };
 
+
+// get all unfavorite movies
+const getUnFavoriteMovies = async (token) => {
+  const { data } = await Axios.get("/users/Unfavorites", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return data;
+};
+
+// delete all favorite movies
+const deleteUnFavoriteMovies = async (token) => {
+  const { data } = await Axios.delete("/users/Unfavorites", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return data;
+};
+
+// like movie API call
+const UnlikeMovieService = async (movieId, token) => {
+  const { data } = await Axios.post(`/users/Unfavorites`, movieId, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return data;
+};
+
+
 // ************ ADMIN APIs ************
 
 // admin get all users
@@ -128,4 +160,7 @@ export {
   getAllUsersService,
   deleteUserService,
   likeMovieService,
+  getUnFavoriteMovies,
+  deleteUnFavoriteMovies,
+  UnlikeMovieService,
 };
