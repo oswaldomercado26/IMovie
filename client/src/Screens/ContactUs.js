@@ -8,21 +8,15 @@ function ContactUs() {
     {
       id: 1,
       title: 'Email Us',
-      info: 'Interactively grow backend ideas for cross-platform models.',
+      info: 'Para cualquier duda o aclaracion de plataformas.',
       icon: FiMail,
-      contact: 'info@zpunet.com',
+      contact: 'info@istreaming.com',
     },
-    {
-      id: 2,
-      title: 'Call Us',
-      info: 'Distinctively exploit optimal alignments for intuitive bandwidth.',
-      icon: FiPhoneCall,
-      contact: '+255 789 456 123',
-    },
+
     {
       id: 3,
-      title: 'Location',
-      info: 'Dar es salaam, Tanzania. 345 Kigamboni, Street No. 12,',
+      title: 'Localizacion',
+      info: 'Centro Universitario de Ciencias Exactas e Ingenierias,',
       icon: FiMapPin,
       contact: '',
     },

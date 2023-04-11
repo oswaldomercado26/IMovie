@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFillGridFill } from "react-icons/bs";
-import { FaListAlt, FaUsers, FaHeart } from "react-icons/fa";
+import { FaListAlt, FaUsers, FaHeart,FaHeartBroken } from "react-icons/fa";
 import {
   RiMovie2Fill,
   RiLockPasswordLine,
@@ -60,9 +60,14 @@ function SideBar({ children }) {
           icon: FiSettings,
         },
         {
-          name: "Favorites Movies",
+          name: "Favorites Streaming",
           link: "/favorites",
           icon: FaHeart,
+        },
+        {
+          name: "Bad Favorites Streaming",
+          link: "/Unfavorites",
+          icon: FaHeartBroken,
         },
         {
           name: "Change Password",
@@ -86,6 +91,11 @@ function SideBar({ children }) {
           name: "Favorites Movies",
           link: "/favorites",
           icon: FaHeart,
+        },
+        {
+          name: "Bad Favorites Streaming",
+          link: "/Unfavorites",
+          icon: FaHeartBroken,
         },
         {
           name: "Change Password",
