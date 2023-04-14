@@ -4,7 +4,7 @@ const ReviewValidation = yup.object().shape({
   comment: yup
     .string()
     .required("Comment is required")
-    .max(150, "Comment should be less than 150 characters"),
+    .max(600, "Comment should be less than 600 characters"),
   rating: yup.number().required("Select a rating"),
 });
 
@@ -20,7 +20,7 @@ const movieValidation = yup.object().shape({
   desc: yup
     .string()
     .required("Please enter a movie description")
-    .max(300, "Movie description should be less than 300 characters"),
+    .max(1000, "Movie description should be less than 600 characters"),
 });
 
 export { ReviewValidation, movieValidation };

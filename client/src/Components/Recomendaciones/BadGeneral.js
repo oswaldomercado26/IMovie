@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IfMovieLiked, LikeMovie } from "../../Context/Functionalities";
 
 const SwiperTop = ({ prevEl, nextEl, movies }) => {
-  const { isLoading } = useSelector((state) => state.userUnLikeMovie);
+  const { isLoading } = useSelector((state) => state.userLikeMovie);
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.userLogin);
 
@@ -75,9 +75,6 @@ const SwiperTop = ({ prevEl, nextEl, movies }) => {
                 {movie?.name}< br />
                 <span>{movie?.platform}</span>
               </Link>
-              <div className="flex gap-2 text-star">
-                <Rating value={movie?.rate} />
-              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -94,7 +91,7 @@ function BadGeneral({ movies, isLoading }) {
 
   return (
     <div className="my-16">
-      <Titles  Icon={BsBookmarkStarFill} />
+      <Titles   title="Bad Recomendaciondes"  Icon={BsBookmarkStarFill} />
       <div className="mt-10">
         {isLoading ? (
           <Loader />

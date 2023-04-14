@@ -4,16 +4,22 @@ import { useDispatch, useSelector } from "react-redux";
 import Head from '../Components/Head';
 import Layout from './../Layout/Layout';
 import General from '../Components/Recomendaciones/General';
+import TopRated from "../Components/Home/TopRated";
 import BadGeneral from '../Components/Recomendaciones/BadGeneral';
-
 import {
 
   getTopRatedMovieAction,
+  getRandomMoviesAction,
 } from "../Redux/Actions/MoviesActions";
 
 function AboutUs() {
   const dispatch = useDispatch();
   // useSelectors
+  const {
+    isLoading: randomLoading,
+    isError: randomError,
+    movies: randomMovies,
+  } = useSelector((state) => state.getRandomMovies);
 
   const {
     isLoading: topLoading,
@@ -29,11 +35,13 @@ function AboutUs() {
 
     // get top rated movies
     dispatch(getTopRatedMovieAction());
+    // get bad rated movies
+    dispatch(getRandomMoviesAction());
     // errors
-    if (topError) {
+    if (topError || randomError) {
       toast.error("Something went wrong!");
     }
-  }, [dispatch, isError, topError]);
+  }, [dispatch, isError,randomError, topError]);
 
   return (
     <Layout>
@@ -44,8 +52,8 @@ function AboutUs() {
         </div>
    
         <General movies={topMovies} isLoading={topLoading} />
+        <BadGeneral movies={randomMovies} isLoading={randomLoading} />
 
-        <BadGeneral movies={topMovies} isLoading={topLoading} />
 
       </div>
     </Layout>
