@@ -65,11 +65,6 @@ function SideBar({ children }) {
           icon: FaHeart,
         },
         {
-          name: "Bad Favorites Streaming",
-          link: "/Unfavorites",
-          icon: FaHeartBroken,
-        },
-        {
           name: "Change Password",
           link: "/password",
           icon: RiLockPasswordLine,
@@ -91,11 +86,6 @@ function SideBar({ children }) {
           name: "Favorites Movies",
           link: "/favorites",
           icon: FaHeart,
-        },
-        {
-          name: "Bad Favorites Streaming",
-          link: "/Unfavorites",
-          icon: FaHeartBroken,
         },
         {
           name: "Change Password",
