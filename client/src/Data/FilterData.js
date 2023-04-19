@@ -1,18 +1,17 @@
 export const LanguageData = [
   { title: "Sort By Language" },
   { title: "English" },
+  { title: "Ingles" },
   { title: "Arabic" },
   { title: "French" },
   { title: "German" },
   { title: "Spanish" },
+  { title: "Español" },
   { title: "Italian" },
   { title: "Russian" },
   { title: "Chinese" },
   { title: "Japanese" },
   { title: "Korean" },
-  { title: "Hindi" },
-  { title: "Urdu" },
-  { title: "Turkish" },
   { title: "Portuguese" },
   { title: "Dutch" },
   { title: "Swedish" },
@@ -55,6 +54,7 @@ export const TimesData = [
 
 export const YearData = [
   { title: "Sort By Year" },
+  { title: "2023" },
   { title: "2022" },
   { title: "2021" },
   { title: "2020" },

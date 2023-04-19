@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Uploder from "../../../Components/Uploder";
+import UploderVideo from "../../../Components/UploderVideo";
 import { Input, Message, Select } from "../../../Components/UsedInputs";
 import SideBar from "../SideBar";
 import { MdDelete } from "react-icons/md";
@@ -238,7 +239,7 @@ function EditMovie() {
                   Video Uploaded!!!
                 </div>
               )}
-              <Uploder setImageUrl={setVideoUrl} />
+              <UploderVideo setImageUrl={setVideoUrl} />
             </div>
           </div>
           {/* CASTS */}
@@ -300,7 +301,7 @@ function EditMovie() {
               "Updating..."
             ) : (
               <>
-                <ImUpload /> Update Movie
+                <ImUpload /> Update Streaming
               </>
             )}
           </button>

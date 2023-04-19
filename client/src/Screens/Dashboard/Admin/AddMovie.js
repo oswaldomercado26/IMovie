@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Uploder from "../../../Components/Uploder";
+import UploderVideo from "../../../Components/UploderVideo";
 import { Input, Message, Select } from "../../../Components/UsedInputs";
 import SideBar from "../SideBar";
 import { MdDelete } from "react-icons/md";
@@ -101,7 +102,7 @@ function AddMovie() {
         cast={cast}
       />
       <div className="flex flex-col gap-6">
-        <h2 className="text-xl font-bold">Create Movie</h2>
+        <h2 className="text-xl font-bold">Crear Streaming</h2>
         <div className="w-full grid md:grid-cols-2 gap-6">
           <div className="w-full">
             <Input
@@ -210,7 +211,7 @@ function AddMovie() {
 
         <div className="flex flex-col gap-2 w-full ">
           <label className="text-border font-semibold text-sm">
-            Movie Video
+            Streaming Trailler
           </label>
           <div className={`w-full grid ${videoUrl && "md:grid-cols-2"} gap-6`}>
             {videoUrl && (
@@ -218,7 +219,7 @@ function AddMovie() {
                 Subir video!!!
               </div>
             )}
-            <Uploder setImageUrl={setVideoUrl} />
+            <UploderVideo setImageUrl={setVideoUrl} />
           </div>
         </div>
         {/* CASTS */}
