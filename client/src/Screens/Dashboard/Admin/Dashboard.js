@@ -33,7 +33,7 @@ function Dashboard() {
 
   // delete movie handler
   const deleteMovieHandler = (id) => {
-    window.confirm("Are you sure you want do delete this movie?") &&
+    window.confirm("Esta seguro de eliminar?") &&
       dispatch(deleteMovieAction(id));
   };
 
@@ -52,19 +52,19 @@ function Dashboard() {
     {
       bg: "bg-orange-600",
       icon: FaRegListAlt,
-      title: "Total Movies",
+      title: "Total Streaming",
       total: isLoading ? "Loading..." : totalMovies || 0,
     },
     {
       bg: "bg-blue-700",
       icon: HiViewGridAdd,
-      title: "Total Categories",
+      title: "Total Categorias",
       total: catLoading ? "Loading..." : categories?.length || 0,
     },
     {
       bg: "bg-green-600",
       icon: FaUser,
-      title: "Total Users",
+      title: "Total Usuarios",
       total: userLoading ? "Loading.." : users?.length || 0,
     },
   ];

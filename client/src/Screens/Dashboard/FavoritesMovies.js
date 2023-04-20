@@ -28,7 +28,7 @@ function FavoritesMovies() {
 
   // delete movies handler
   const deleteMoviesHandler = () => {
-    window.confirm("Are you sure you want to delete all movies?") &&
+    window.confirm("Esta seguro de borrar el streaming?") &&
       dispatch(deleteFavoriteMoviesAction());
   };
 
@@ -78,7 +78,7 @@ function FavoritesMovies() {
             progress={progress}
           />
         ) : (
-          <Empty message="You have no favorites movies" />
+          <Empty message="Tu no tienes favoritos" />
         )}
       </div>
     </SideBar>

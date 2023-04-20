@@ -128,7 +128,7 @@ function EditMovie() {
           <div className="flex-colo w-24 h-24 p-5 mb-4 rounded-full bg-dry text-subMain text-4xl">
             <RiMovie2Line />
           </div>
-          <p className="text-border text-sm">Something went wrong</p>
+          <p className="text-border text-sm">Tenemos un problema al momento de cargar los datos</p>
         </div>
       ) : (
         <div className="flex flex-col gap-6">
@@ -136,7 +136,7 @@ function EditMovie() {
           <div className="w-full grid md:grid-cols-2 gap-6">
             <div className="w-full">
               <Input
-                label="Movie Title"
+                label="Titulo"
                 placeholder="Game of Thrones"
                 type="text"
                 bg={true}
@@ -147,7 +147,7 @@ function EditMovie() {
             </div>
             <div className="w-full">
               <Input
-                label="Hours"
+                label="Horas"
                 placeholder="2hr"
                 type="number"
                 bg={true}
@@ -161,7 +161,7 @@ function EditMovie() {
           <div className="w-full grid md:grid-cols-2 gap-6">
             <div className="w-full">
               <Input
-                label="Language Used"
+                label="Lenguage de la pelicula"
                 placeholder="English"
                 type="text"
                 bg={true}
@@ -174,7 +174,7 @@ function EditMovie() {
             </div>
             <div className="w-full">
               <Input
-                label="Year of Release"
+                label="Año de la pelicula"
                 placeholder="2022"
                 type="number"
                 bg={true}
@@ -190,7 +190,7 @@ function EditMovie() {
             {/* img without title */}
             <div className="flex flex-col gap-2">
               <p className="text-border font-semibold text-sm">
-                Image without Title
+                Imagen de portada
               </p>
               <Uploder setImageUrl={setImageWithoutTitle} />
               <Imagepreview image={imageWithoutTitle} name="imageWithouTitle" />
@@ -198,7 +198,7 @@ function EditMovie() {
             {/* image with title */}
             <div className="flex flex-col gap-2">
               <p className="text-border font-semibold text-sm">
-                Image with Title
+                Imagen de fondo
               </p>
               <Uploder setImageUrl={setImageTitle} />
               <Imagepreview image={imageTitle} name="imageTitle" />
@@ -207,8 +207,8 @@ function EditMovie() {
           {/* DESCRIPTION */}
           <div className="w-full">
             <Message
-              label="Movie Description"
-              placeholder="Make it short and sweet"
+              label="Sipnosis"
+              placeholder="Sipnosis"
               name="desc"
               register={{ ...register("desc") }}
             />
@@ -218,7 +218,7 @@ function EditMovie() {
 
           <div className="text-sm w-full">
             <Select
-              label="Movie Category"
+              label="Categoria Streaming"
               options={categories?.length > 0 ? categories : []}
               name="category"
               register={{ ...register("category") }}
@@ -298,10 +298,10 @@ function EditMovie() {
             className="bg-subMain w-full flex-rows gap-6 font-medium text-white py-4 rounded"
           >
             {editLoading ? (
-              "Updating..."
+              "Actualizando..."
             ) : (
               <>
-                <ImUpload /> Update Streaming
+                <ImUpload /> Actualizar Streaming
               </>
             )}
           </button>

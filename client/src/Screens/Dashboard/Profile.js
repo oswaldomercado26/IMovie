@@ -41,7 +41,7 @@ function Profile() {
 
   // delete profile
   const deleteProfile = () => {
-    window.confirm("Are you sure you want to delete your profile?") &&
+    window.confirm("Esta seguro de eliminar su perfil?") &&
       dispatch(deleteProfileAction());
   };
 
@@ -80,7 +80,7 @@ function Profile() {
 
         <div className="w-full">
           <Input
-            label="FullName"
+            label="Nombre Completo"
             placeholder="I Love Streaming"
             type="text"
             bg={true}

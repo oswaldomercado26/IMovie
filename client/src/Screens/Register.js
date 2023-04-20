@@ -63,7 +63,7 @@ function Register() {
           />
           <div className="w-full">
             <Input
-              label="FullName"
+              label="Nombre Completo"
               placeholder="I love Streaming"
               type="text"
               bg={true}
@@ -86,7 +86,7 @@ function Register() {
           </div>
           <div className="w-full">
             <Input
-              label="Password"
+              label="Contraseña"
               placeholder="*******"
               type="password"
               bg={true}
@@ -113,7 +113,7 @@ function Register() {
             }
           </button>
           <p className="text-center text-border">
-            Already have an account?{" "}
+            Ya tienes una cuenta?{" "}
             <Link to="/login" className="text-dryGray font-semibold ml-2">
               Sign In
             </Link>

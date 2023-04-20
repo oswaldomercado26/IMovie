@@ -79,22 +79,22 @@ function Table2({ data, users, OnEditFunction, onDeleteFunction }) {
             {users ? (
               <>
                 <th scope="col" className={`${Head}`}>
-                  Image
+                  Imagen
                 </th>
                 <th scope="col" className={`${Head}`}>
                   Id
                 </th>
                 <th scope="col" className={`${Head}`}>
-                  Date
+                  Fecha
                 </th>
                 <th scope="col" className={`${Head}`}>
-                  Full Name
+                  Nombre
                 </th>
                 <th scope="col" className={`${Head}`}>
                   Email
                 </th>
                 <th scope="col" className={`${Head}`}>
-                  Role
+                  Rol
                 </th>
               </>
             ) : (
@@ -103,7 +103,7 @@ function Table2({ data, users, OnEditFunction, onDeleteFunction }) {
                   Id
                 </th>
                 <th scope="col" className={`${Head}`}>
-                  Date
+                  Fecha
                 </th>
                 <th scope="col" className={`${Head}`}>
                   Name
@@ -112,7 +112,7 @@ function Table2({ data, users, OnEditFunction, onDeleteFunction }) {
             )}
 
             <th scope="col" className={`${Head} text-end`}>
-              Actions
+              Acciones
             </th>
           </tr>
         </thead>

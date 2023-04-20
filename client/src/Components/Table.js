@@ -71,25 +71,25 @@ function Table({ data, admin, onDeleteHandler, downloadVideo, progress }) {
         <thead>
           <tr className="bg-dryGray">
             <th scope="col" className={`${Head}`}>
-              Image
+              Imagen
             </th>
             <th scope="col" className={`${Head}`}>
-              Name
+              Nombre
             </th>
             <th scope="col" className={`${Head}`}>
-              Category
+              Categoria
             </th>
             <th scope="col" className={`${Head}`}>
-              Language
+              Lenguaje
             </th>
             <th scope="col" className={`${Head}`}>
-              Year
+              Año
             </th>
             <th scope="col" className={`${Head}`}>
-              Hours
+              Horas
             </th>
             <th scope="col" className={`${Head} text-end`}>
-              Actions
+              Acciones
             </th>
           </tr>
         </thead>

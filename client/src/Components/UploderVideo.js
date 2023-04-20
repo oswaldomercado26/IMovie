@@ -38,13 +38,13 @@ function UploderVideo({ setImageUrl }) {
           <span className="mx-auto flex-colo text-subMain text-3xl">
             <FiUploadCloud />
           </span>
-          <p className="text-sm mt-2">Drag your video here</p>
+          <p className="text-sm mt-2">Arrastra tu video aqui</p>
           <em className="text-xs text-border">
             {isDragActive
-              ? "Drop it like it's hot!"
+              ? "Arrastra para subir !"
               : isDragReject
-              ? "Unsupported file type..."
-              : "only .mp4 and .mp3 files will be accepted"}
+              ? "Tipos soportados..."
+              : "Solo .mp4 and .mp3 son aceptados"}
           </em>
         </div>
       )}

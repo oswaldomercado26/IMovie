@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFillGridFill } from "react-icons/bs";
-import { FaListAlt, FaUsers, FaHeart,FaHeartBroken } from "react-icons/fa";
+import { FaListAlt, FaUsers, FaHeart } from "react-icons/fa";
 import {
   RiMovie2Fill,
   RiLockPasswordLine,
@@ -30,42 +30,43 @@ function SideBar({ children }) {
   const SideLinks = userInfo?.isAdmin
     ? [
         {
-          name: "Dashboard",
+          name: "Tablero",
           link: "/dashboard",
           icon: BsFillGridFill,
         },
         {
-          name: "Movies List",
+          name: "Lista Streaming",
           link: "/movieslist",
           icon: FaListAlt,
         },
         {
-          name: "Add Streaming",
+          name: "Añadir Streaming",
           link: "/addmovie",
           icon: RiMovie2Fill,
         },
         {
-          name: "Categories",
+          name: "Categorias",
           link: "/categories",
           icon: HiViewGridAdd,
         },
         {
-          name: "Users",
+          name: "Usuarios",
           link: "/users",
           icon: FaUsers,
         },
         {
-          name: "Update Profile",
+          name: "Actualizar perfil",
           link: "/profile",
           icon: FiSettings,
         },
         {
-          name: "Favorites Streaming",
+          name: "Favoritos Streaming",
           link: "/favorites",
           icon: FaHeart,
         },
+
         {
-          name: "Change Password",
+          name: "Cambiar Contraseña",
           link: "/password",
           icon: RiLockPasswordLine,
         },
@@ -73,22 +74,23 @@ function SideBar({ children }) {
     : userInfo
     ? [
         {
-          name: "Add Streaming",
+          name: "Añadir Streaming",
           link: "/addmovie",
           icon: RiMovie2Fill,
         },
         {
-          name: "Update Profile",
+          name: "Actualizar perfil",
           link: "/profile",
           icon: FiSettings,
         },
         {
-          name: "Favorites Movies",
+          name: "Streaming Favorito",
           link: "/favorites",
           icon: FaHeart,
         },
+
         {
-          name: "Change Password",
+          name: "Cambiar Contraseña",
           link: "/password",
           icon: RiLockPasswordLine,
         },

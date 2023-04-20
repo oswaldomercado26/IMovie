@@ -75,7 +75,7 @@ function Login() {
 
           <div className="w-full">
             <Input
-              label="Password"
+              label="Contraseña"
               placeholder="*******"
               type="password"
               bg={true}
@@ -93,7 +93,7 @@ function Login() {
             {
               // if loading show loading
               isLoading ? (
-                "Loading..."
+                "Cargando..."
               ) : (
                 <>
                   <FiLogIn /> Sign In

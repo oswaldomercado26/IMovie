@@ -90,7 +90,7 @@ function MovieRates({ movie }) {
           </p>
           <div className="text-sm w-full">
             <Select
-              label="Select Rating"
+              label="Seleccionar rating"
               options={Ratings}
               name="rating"
               register={{ ...register("rating") }}
@@ -103,10 +103,10 @@ function MovieRates({ movie }) {
           {/* message */}
           <div className="w-full">
             <Message
-              name="comment"
+              name="comentario"
               register={{ ...register("comment") }}
               label="Message"
-              placeholder="Make it short and sweet...."
+              placeholder="Escribe tu comentario...."
             />
             {errors.comment && <InlineError text={errors.comment.message} />}
           </div>
@@ -125,7 +125,7 @@ function MovieRates({ movie }) {
               to="/login"
               className="bg-main border border-dashed border-border text-subMain py-4 w-full flex-colo rounded"
             >
-              Login to review this movie
+              Inicia sesion para crear comentarios
             </Link>
           )}
         </form>

@@ -48,10 +48,10 @@ function Password() {
   return (
     <SideBar>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
-        <h2 className="text-xl font-bold">Change Password</h2>
+        <h2 className="text-xl font-bold">Cambiar contraseña</h2>
         <div className="w-full">
           <Input
-            label="Previous Password"
+            label="Contraseña anterior"
             placeholder="********"
             type="password"
             bg={true}
@@ -64,7 +64,7 @@ function Password() {
         </div>
         <div className="w-full">
           <Input
-            label="New Password"
+            label="Nueva contraseña"
             placeholder="********"
             type="password"
             bg={true}
@@ -77,7 +77,7 @@ function Password() {
         </div>
         <div className="w-full">
           <Input
-            label="Confirm Password"
+            label="Confirmar contraseña"
             placeholder="********"
             type="password"
             bg={true}

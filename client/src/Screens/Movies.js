@@ -134,7 +134,7 @@ function MoviesPage() {
               <RiMovie2Line />
             </div>
             <p className="text-border text-sm">
-              It seem's like we dont have any movie
+              tenemos problemas al cargar las peliculas
             </p>
           </div>
         )}

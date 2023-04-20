@@ -36,7 +36,7 @@ function CategoryModal({ modalOpen, setModalOpen, category }) {
         setModalOpen(!modalOpen);
       }
     } else {
-      toast.error("Please write a category name");
+      toast.error("Porfavor escribe el nombre de la categoria");
     }
   };
 
@@ -77,7 +77,7 @@ function CategoryModal({ modalOpen, setModalOpen, category }) {
           onSubmit={submitHandler}
         >
           <Input
-            label="Category Name"
+            label="Categoria"
             placeholder={"Actions"}
             type="text"
             bg={false}

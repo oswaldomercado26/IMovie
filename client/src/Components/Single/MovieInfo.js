@@ -50,7 +50,7 @@ function MovieInfo({ movie, setModalOpen, DownloadVideo, progress }) {
                 {/* language */}
                 <div className="col-span-2 flex-colo font-medium text-sm">
                   <p>
-                    Language :{" "}
+                    Lenguaje :{" "}
                     <span className="ml-2 truncate">{movie?.language}</span>
                   </p>
                 </div>

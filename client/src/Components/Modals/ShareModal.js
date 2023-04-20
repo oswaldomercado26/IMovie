@@ -2,30 +2,26 @@ import React from "react";
 import MainModal from "./MainModal";
 import {
   FaFacebook,
-  FaPinterest,
+
   FaTelegram,
-  FaTwitter,
+
   FaWhatsapp,
 } from "react-icons/fa";
 import {
-  EmailShareButton,
+
   FacebookShareButton,
-  PinterestShareButton,
+
   TelegramShareButton,
-  TwitterShareButton,
+
   WhatsappShareButton,
 } from "react-share";
-import { MdEmail } from "react-icons/md";
+
 
 function ShareMovieModal({ modalOpen, setModalOpen, movie }) {
   const shareData = [
     {
       icon: FaFacebook,
       shareButton: FacebookShareButton,
-    },
-    {
-      icon: FaTwitter,
-      shareButton: TwitterShareButton,
     },
     {
       icon: FaTelegram,
@@ -35,14 +31,7 @@ function ShareMovieModal({ modalOpen, setModalOpen, movie }) {
       icon: FaWhatsapp,
       shareButton: WhatsappShareButton,
     },
-    {
-      icon: FaPinterest,
-      shareButton: PinterestShareButton,
-    },
-    {
-      icon: MdEmail,
-      shareButton: EmailShareButton,
-    },
+
   ];
 
   const url = `${window.location.protocol}//${window.location.host}/movie/${movie?._id}`;

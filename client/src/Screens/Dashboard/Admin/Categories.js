@@ -54,12 +54,12 @@ function Categories() {
       />
       <div className="flex flex-col gap-6">
         <div className="flex-btn gap-2">
-          <h2 className="text-xl font-bold">Categories</h2>
+          <h2 className="text-xl font-bold">Categorias</h2>
           <button
             onClick={() => setModalOpen(true)}
             className="bg-subMain flex-rows gap-4 font-medium transitions hover:bg-main border border-subMain text-white py-2 px-4 rounded"
           >
-            <HiPlusCircle /> Create
+            <HiPlusCircle /> Crear
           </button>
         </div>
 
@@ -73,7 +73,7 @@ function Categories() {
             onDeleteFunction={adminDeletecategory}
           />
         ) : (
-          <Empty message="You have no categories" />
+          <Empty message="Tu no tienes categorias" />
         )}
       </div>
     </SideBar>

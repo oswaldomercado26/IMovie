@@ -46,7 +46,7 @@ function CastsModal({ modalOpen, setModalOpen, cast }) {
           id: cast.id,
         })
       );
-      toast.success("Cast updated successfully");
+      toast.success("Casting actualizado satisfactoriamente");
     } else {
       // else create cast
       dispatch(
@@ -56,7 +56,7 @@ function CastsModal({ modalOpen, setModalOpen, cast }) {
           id: generateId,
         })
       );
-      toast.success("Cast created successfully");
+      toast.success("Casting creado satisfactoriamente");
     }
     reset();
     setCastImage("");
@@ -81,7 +81,7 @@ function CastsModal({ modalOpen, setModalOpen, cast }) {
         >
           <div className="w-full">
             <Input
-              label="Cast name"
+              label="Nombre casting"
               placeholder="John Doe"
               type="text"
               name="name"
@@ -91,7 +91,7 @@ function CastsModal({ modalOpen, setModalOpen, cast }) {
             {errors.name && <InlineError text={errors.name.message} />}
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-border font-semibold text-sm">Cast Image</p>
+            <p className="text-border font-semibold text-sm">Casting Imagen</p>
             <Uploder setImageUrl={setCastImage} />
             <Imagepreview
               image={image ? image : "/images/user.png"}

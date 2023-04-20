@@ -3,24 +3,24 @@ import * as yup from "yup";
 const ReviewValidation = yup.object().shape({
   comment: yup
     .string()
-    .required("Comment is required")
-    .max(600, "Comment should be less than 600 characters"),
+    .required("Commentario es requerido")
+    .max(1000, "Comentario solo tiene 1000 caracteres"),
   rating: yup.number().required("Select a rating"),
 });
 
 const movieValidation = yup.object().shape({
   name: yup
     .string()
-    .required("Please enter a movie name")
-    .max(50, "Movie name should be less than 50 characters"),
-  time: yup.number().required("Please enter a movie duration"),
-  language: yup.string().required("Please enter a movie language"),
-  year: yup.number().required("Please enter year of release"),
-  category: yup.string().required("Please select movie category"),
+    .required("Ingresa el titulo del streaming")
+    .max(50, "Solo puede tener 50 caracteres"),
+  time: yup.number().required("Ingresa la duracion"),
+  language: yup.string().required("Ingresa el lenguaje"),
+  year: yup.number().required("ingresa el año y la categoria"),
+  category: yup.string().required("Selecciona la categoria"),
   desc: yup
     .string()
-    .required("Please enter a movie description")
-    .max(1000, "Movie description should be less than 600 characters"),
+    .required("Porfavor ingresa tu sipnosis")
+    .max(2000, "Sipnosis solo tiene que tener 2000 caracteres"),
 });
 
 export { ReviewValidation, movieValidation };

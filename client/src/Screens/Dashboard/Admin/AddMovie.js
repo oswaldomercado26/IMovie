@@ -106,7 +106,7 @@ function AddMovie() {
         <div className="w-full grid md:grid-cols-2 gap-6">
           <div className="w-full">
             <Input
-              label="Movie Title"
+              label="Titulo del Streaming"
               placeholder="Game of Thrones"
               type="text"
               bg={true}
@@ -117,7 +117,7 @@ function AddMovie() {
           </div>
           <div className="w-full">
             <Input
-              label="Hours"
+              label="Horas"
               placeholder="2hr"
               type="number"
               bg={true}
@@ -131,7 +131,7 @@ function AddMovie() {
          
          <div className="w-full">
            <Input
-             label="Platform"
+             label="Plataforma"
              placeholder="netflix"
              type="text"
              bg={true}
@@ -145,7 +145,7 @@ function AddMovie() {
         <div className="w-full grid md:grid-cols-2 gap-6">
           <div className="w-full">
             <Input
-              label="Language Used"
+              label="Lenguaje Usado"
               placeholder="English"
               type="text"
               bg={true}
@@ -156,7 +156,7 @@ function AddMovie() {
           </div>
           <div className="w-full">
             <Input
-              label="Year of Release"
+              label="Año de publicacion"
               placeholder="2022"
               type="number"
               bg={true}
@@ -172,7 +172,7 @@ function AddMovie() {
           {/* img without title */}
           <div className="flex flex-col gap-2">
             <p className="text-border font-semibold text-sm">
-              Image without Title
+              Imagen portada
             </p>
             <Uploder setImageUrl={setImageWithoutTitle} />
             <Imagepreview image={imageWithoutTitle} name="imageWithouTitle" />
@@ -180,7 +180,7 @@ function AddMovie() {
           {/* image with title */}
           <div className="flex flex-col gap-2">
             <p className="text-border font-semibold text-sm">
-              Image with Title
+              Imagen fondo
             </p>
             <Uploder setImageUrl={setImageTitle} />
             <Imagepreview image={imageTitle} name="imageTitle" />
@@ -189,8 +189,8 @@ function AddMovie() {
         {/* DESCRIPTION */}
         <div className="w-full">
           <Message
-            label="Movie Description"
-            placeholder="Make it short and sweet"
+            label="Sipnosis"
+            placeholder="Escribir una reseña pelicula"
             name="desc"
             register={{ ...register("desc") }}
           />
@@ -200,7 +200,7 @@ function AddMovie() {
 
         <div className="text-sm w-full">
           <Select
-            label="Movie Category"
+            label="Categoria Streaming"
             options={categories?.length > 0 ? categories : []}
             name="category"
             register={{ ...register("category") }}
@@ -271,7 +271,7 @@ function AddMovie() {
           className="bg-subMain w-full flex-rows gap-6 font-medium text-white py-4 rounded"
         >
           {isLoading ? (
-            "Please wait..."
+            "Subiendo..."
           ) : (
             <>
               <ImUpload /> Publicar Streaming
