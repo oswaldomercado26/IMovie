@@ -9,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Rating from "../Stars";
 import Loader from "../Notfications/Loader";
 import { Empty } from "../Notfications/Empty";
 import { useDispatch, useSelector } from "react-redux";

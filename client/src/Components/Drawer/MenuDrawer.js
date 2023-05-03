@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { BsCollectionPlay } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import { FaFacebook, FaMedium, FaTelegram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
 
 function MenuDrawer({ drawerOpen, toggleDrawer }) {
   const active = "bg-dry text-subMain";

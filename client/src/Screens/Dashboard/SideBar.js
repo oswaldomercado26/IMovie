@@ -55,7 +55,7 @@ function SideBar({ children }) {
           icon: FaUsers,
         },
         {
-          name: "Actualizar perfil",
+          name: "Perfil",
           link: "/profile",
           icon: FiSettings,
         },
@@ -79,7 +79,7 @@ function SideBar({ children }) {
           icon: RiMovie2Fill,
         },
         {
-          name: "Actualizar perfil",
+          name: "Perfil",
           link: "/profile",
           icon: FiSettings,
         },

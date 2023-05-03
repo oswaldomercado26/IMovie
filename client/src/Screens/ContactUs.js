@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPhoneCall, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail } from 'react-icons/fi';
 import Head from '../Components/Head';
 import Layout from '../Layout/Layout';
 

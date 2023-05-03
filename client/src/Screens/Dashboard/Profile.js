@@ -8,6 +8,10 @@ import { InlineError } from "../../Components/Notfications/Error";
 import Uploder from "../../Components/Uploder";
 import { Input } from "../../Components/UsedInputs";
 import { ProfileValidation } from "../../Components/Validation/UserValidation";
+import Table from "../../Components/Table";
+import { getRandomMoviesAction } from "../../Redux/Actions/MoviesActions";
+import Loader from "../../Components/Notfications/Loader";
+import { Empty } from "../../Components/Notfications/Empty";
 import {
   deleteProfileAction,
   updateProfileAction,
@@ -24,6 +28,11 @@ function Profile() {
   const { isLoading: deleteLoading, isError: deleteError } = useSelector(
     (state) => state.userDeleteProfile
   );
+  const {
+    isLoading: randomLoading,
+    isError: randomError,
+    movies: randomMovies,
+  } = useSelector((state) => state.getRandomMovies);
   // validate user
   const {
     register,
@@ -45,6 +54,7 @@ function Profile() {
       dispatch(deleteProfileAction());
   };
 
+
   // useEffect
   useEffect(() => {
     if (userInfo) {
@@ -59,12 +69,13 @@ function Profile() {
       dispatch({ type: "USER_UPDATE_PROFILE_RESET" });
       dispatch({ type: "USER_DELETE_PROFILE_RESET" });
     }
-  }, [userInfo, setValue, isSuccess, isError, dispatch, deleteError]);
+    dispatch(getRandomMoviesAction());
+  }, [userInfo, setValue, isSuccess, isError, dispatch, deleteError, randomError]);
 
   return (
     <SideBar>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
-        <h2 className="text-xl font-bold">Perfil</h2>
+        <h2 className="text-xl font-bold">Profile</h2>
         <div className="w-full grid lg:grid-cols-12 gap-6">
           <div className="col-span-10">
             <Uploder setImageUrl={setImageUrl} />
@@ -100,6 +111,19 @@ function Profile() {
           />
           {errors.email && <InlineError text={errors.email.message} />}
         </div>
+        <h2 className="text-xl font-bold">Basado en tu contenido</h2>
+        {randomLoading ? (
+        <Loader />
+      ) : randomMovies.length > 0 ? (
+        <Table
+          data={randomMovies?.slice(0, 10)}
+          admin={false}
+          
+        />
+      ) : (
+        <Empty message="Vacio" />
+      )}
+        
         <div className="flex gap-2 flex-wrap flex-col-reverse sm:flex-row justify-between items-center my-4">
           <button
             onClick={deleteProfile}

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Head from '../Components/Head';
 import Layout from './../Layout/Layout';
 import General from '../Components/Recomendaciones/General';
-import TopRated from "../Components/Home/TopRated";
+
 import BadGeneral from '../Components/Recomendaciones/BadGeneral';
 import {
 
